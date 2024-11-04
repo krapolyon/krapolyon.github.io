@@ -342,7 +342,7 @@ html {
 
 /* |||| Secondary button - dark background */
 
-.btn--secondary {
+.btn--secondary, .btn--secondary:link {
     color: var(--tertiary-color);
     background: var(--primary-color);
 }
