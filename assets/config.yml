@@ -1,0 +1,529 @@
+media:
+
+  audio:
+    - title: Mauvaise copie
+      year: 2019
+      url: https://soundcloud.com/leskrapos/sets/mauvaise-copie
+      artwork: 
+        file: mauvaise_copie.jpg
+        width: 100px
+        height: 100px
+      
+    - title: Love @NewMorning
+      year: 2016
+      url: https://soundcloud.com/leskrapos/sets/love-newmorning
+      artwork: 
+          file: new_morning.jpg
+          width: 100px
+          height: 100px
+      
+    - title: Interdits de Gymnase
+      year: 2010 
+      url: https://soundcloud.com/leskrapos/sets/interdits-de-gymnase
+      artwork: 
+        file: interdits_gymnase.jpg
+        width: 100px
+        height: 100px
+
+  video:
+    - tune: Toccata
+      reference: Fanfa'Rhône 2021
+      url: https://youtu.be/X9S5LUO_yD8
+      artwork: 
+        file: toccata.jpg
+        width: 160px
+        height: 90px
+
+    - tune: Medley Daft Punk
+      reference: Fanfa'Rhône 2021
+      url: https://youtu.be/PmUCXIE-QrU
+      artwork: 
+        file: daftpunk.jpg
+        width: 160px
+        height: 90px
+
+setlist:
+  - title: "8 bit" 
+    artist: "Adhesive Wombat"
+  - title: "Biffy"
+    artist: "Biffy"
+  - title: "Bonfire"
+    artist: "Knife Party"
+  - title: "Canned Heat"
+    artist: "Jamiroquai"
+
+regions :
+  ARA: Auvergne-Rhône-Alpes
+  BFC: Bourgogne-Franche-Comté
+  BRE: Bretagne
+  COR: Corse
+  CVL: Centre-Val de Loire
+  GES: Grand Est
+  HDF: Hauts-de-France
+  IDF:  Île-de-France
+  NAQ: Nouvelle-Aquitaine
+  NOR:  Normandie
+  OCC:  Occitanie
+  PAC: Provence-Alpes-Côte d'Azur
+  PDL:  Pays de la Loire
+  WLD: Ailleurs dans le monde ...
+
+
+#Pas pu mettre les zouzes, pas trouvé de page FB
+#Je les ai rangés par régions, plus facile pour gérer l'ordre: le site les affiche dans l'ordre où ils arrivent, du coup on mettre ceux qu'on aime le plus avant ;)
+
+friends:
+  - name: La Pustule
+    tagline: La fanfare qui décapsule
+    region: ARA
+    location: Lyon
+    logo: pustule
+    url: https://pustule.org
+
+  - name: LGMX
+    tagline: Fanfare psychoactive électrostimulante
+    region: ARA
+    location: Lyon
+    logo: lgmx
+    url: https://www.lgmx.fr
+
+  - name: Super Smash Brass
+    tagline: Fanfare jeux vidéos
+    region: ARA
+    location: Lyon
+    logo: ssb
+    url: http://supersmashbrass.com
+
+  - name: Kärlek
+    tagline: Reprises Black-Death-Thrash
+    region: ARA
+    location: Lyon
+    logo: karlek
+    url: https://www.facebook.com/fanfarekarlek/
+
+  - name: La Fanfat'
+    tagline: La seule fanfare 100% matière grasse. Mais avec des paillettes.
+    region: ARA
+    location: Lyon
+    logo: fanfat
+    url: https://www.facebook.com/lafanfat/
+
+  - name: Over Ze Knup
+    tagline: Classic & Rock'n'Roll Quatuor sauce Punk'Jazz
+    region: ARA
+    location: Lyon
+    logo: over_ze_knup
+    url: https://overzeuknup.top
+
+  - name: Fat Ducks
+    tagline: Jeune fanfare énergique aux rythmes de funk et d'électro
+    region: ARA
+    location: Lyon
+    logo: fat_ducks
+    url: https://www.facebook.com/profile.php?id=100076116732441
+
+  - name: Canal Chips
+    tagline: Fanfare festive en Drôme-Ardèche
+    region: ARA
+    location: Valence
+    logo: canal_chips
+    url: https://canalchips.wixsite.com/chips
+
+  - name: Marcel Frontale
+    tagline: Fanfare New Orleans
+    region: ARA
+    location: Lyon
+    logo: marcel_frontale
+    url: https://www.facebook.com/MarcelFrontale
+
+  - name: Velcro’s Brass Band
+    tagline: Musique survitaminée
+    region: ARA
+    location: Lyon
+    logo: velcros
+    url: https://www.facebook.com/velcrosbrassband/
+
+  - name: La Cacophonie
+    tagline: Fanfare presqu'écoutable
+    region: ARA
+    location: Lyon
+    logo: cacophonie
+    url: http://www.fanfare-cacophonie.org
+
+  - name: Pink It Black
+    tagline: La fanfare en rose et noir
+    region: ARA
+    location: Grenoble
+    logo: pink_it_black
+    url: https://pinkitblack.fr/
+
+  - name: 38 tonnes
+    tagline: 
+    region: ARA
+    location: Grenoble
+    logo: 38_tonnes
+    url: https://www.38tonnes.fr
+
+  - name: La Mort Subite
+    tagline: 
+    region: ARA
+    location: Grenoble
+    logo: mort_subite
+    url: https://bandlamortsubite.wixsite.com/band-lamortsubite
+
+  - name: Les garces embouchées
+    tagline: 
+    region: ARA
+    location: Grenobles
+    logo: garces_emouchees
+    url: http://garcesembouchees.canalblog.com/
+
+  - name: Elan Brass Band
+    tagline: 
+    region: BFC
+    location: Toucy
+    logo: elan_brass_band
+    url: http://www.elanbrassband.org
+
+  - name: La Banda Freux
+    tagline: La fanfare la plus à l'ouest
+    region: BRE
+    location: Brest
+    logo: banda_freux
+    url: https://www.facebook.com/profile.php?id=100062927544086
+
+  - name: A Bout de Souffle
+    tagline: 
+    region: BRE
+    location: Douarnenez
+    logo: a_bout_de_souffle
+    url: http://aboutdesouffle.free.fr
+
+  - name: Zebaliz
+    tagline: Joyeuse fanfare
+    region: BRE
+    location: Brest
+    logo: zebaliz
+    url: http://fanfare-zebaliz.com/home.php3
+
+  - name: La Vaginale
+    tagline:
+    region: CVL
+    location: Tours
+    logo: la_vaginale
+    url: https://sitelavaginale.wixsite.com/lavaginale
+
+  - name: FEIS
+    tagline: Fanfare des Externes et Internes de Strasbourg
+    region: GES
+    location: Strasbourg
+    logo: feis
+    url: https://www.facebook.com/Fanfare.FEIS/?locale=fr_FR
+
+  - name: Fanfare Tractopelle
+    tagline: Groupe rétro-futuriste
+    region: HDF
+    location: Lille
+    logo: tractopelle
+    url: http://www.fanfaretractopelle.fr
+
+  - name: La Brigade des Tubes
+    tagline: 
+    region: HDF
+    location: Lille
+    logo: brigade_des_tubes
+    url: http://www.labrigadedestubes.com
+
+  - name: 3615 Brass Band
+    tagline: Fanfare bas débit
+    region: IDF
+    location: Paris
+    logo: 3615
+    url: https://3615bb.com
+
+  - name: Rolland Merguez
+    tagline: Fanfare cosmique
+    region: IDF
+    location: Paris
+    logo: rolland_merguez
+    url: http://rollandmerguez.fr
+
+  - name: Dumb and Brass
+    tagline: Fanfare psycho-Caraïbes-Electro-Funk-Reggae
+    region: IDF
+    location: Paris
+    logo: dumb_and_brass
+    url: http://www.dumbandbrass.com
+
+  - name: Mouette et Charbons
+    tagline: 
+    region: IDF
+    location: Paris
+    logo: mouette_et_charbons
+    url: https://mouetteetcharbons.tumblr.com
+
+  - name: Les lapins superstars
+    tagline: 
+    region: IDF
+    location: Paris
+    logo: lapins_superstars
+    url: https://www.facebook.com/leslapinsuperstars/
+
+  - name: La voiture 4
+    tagline: 
+    region: IDF
+    location: Paris
+    logo: voiture_4
+    url: http://voiture4.free.fr
+
+  - name: SuperTromp
+    tagline: Fanfare Powwwerrrrr! et de qualité
+    region: IDF
+    location: Paris
+    logo: supertromp
+    url: https://www.facebook.com/FanfareSupertromp/
+
+  - name: Les Zôtres
+    tagline: Fanfare Indirigeable
+    region: IDF
+    location: Paris
+    logo: les_zotres
+    url: https://www.facebook.com/leszotres.fanfare/?locale=fr_FR
+
+  - name: Bindy Nasty
+    tagline: 
+    region: IDF
+    location: Paris
+    logo: bindy_nasty 
+    url: https://bindinasty.wixsite.com/bindi
+
+  - name: Tabatakash
+    tagline: 
+    region: IDF
+    location: Paris
+    logo: tabatakash
+    url: https://tabatakashfanfare.wixsite.com/tabatakash
+
+  - name: Godfingers
+    tagline: 
+    region: IDF
+    location: Paris
+    logo: godfingers
+    url: https://www.godfingers.com
+  - name: Poil O'Brass Band
+    tagline: Fanfare ébouriffante à la bonne humeur duveteuse
+
+    region: IDF
+    location: Paris
+    logo: poilobrassband
+    url: https://www.facebook.com/Poilobrass/
+
+  - name: Les Gratkipoils
+    tagline: La fanfare qui démange
+    region: IDF
+    location: Paris
+    logo: gratkipoils
+    url: http://gratkipoils.free.fr
+
+  - name: Les Monty Pistons
+    tagline: 
+    region: IDF
+    location: Paris
+    logo: monty_pistons
+    url: https://www.facebook.com/fanfareMonty/
+
+  - name: 404 Bonheur
+    tagline: 
+    region: IDF
+    location: Paris
+    logo: 404_bonheur
+    url: https://www.facebook.com/404bonheur/
+
+  - name: Les muses tanguent
+    tagline: 
+    region: IDF
+    location: Paris
+    logo: muses_tanguent
+    url: https://www.facebook.com/profile.php?id=100063747243051
+
+  - name: La Grasse Bande
+    tagline: 
+    region: NAQ
+    location: Bordeaux
+    logo: la_grasse_bande
+    url: https://lagrassebande.fr
+
+  - name: Los Teoporos
+    tagline: Tzigani Funky !
+    region: NAQ
+    location: Bordeaux
+    logo: los_teoporos
+    url: https://www.facebook.com/fanfarelosteoporos
+
+  - name: Los Arsouillos
+    tagline: 
+    region: NAQ
+    location: Aire sur l'Adour
+    logo: los_arsouillos
+    url: https://www.arsouillos.com
+
+  - name: Le Beat Cheese
+    tagline: Fanfare affinée
+    region: NAQ
+    location: Bordeaux
+    logo: le_beat_cheese
+    url: https://fanfarelebeatcheese.fr
+
+  - name: Brigitte Bordo
+    tagline: 
+    region: NAQ
+    location: Bordeaux
+    logo: brigitte_bordo
+    url: https://brigitte-bordo.com
+
+  - name: Les P'tits Culs Ivres
+    tagline: Fanfare de type brass band britannico-New-Orleans
+    region: NAQ
+    location: Limoges
+    logo: les_ptits_culs_ivres
+    url: https://www.facebook.com/LesPtitsCulsIvres
+
+  - name: L'Etoile Cirée
+    tagline: 
+    region: NOR
+    location: Grandvill
+    logo: letoile_ciree
+    url: https://www.facebook.com/fanfare.etoile.ciree
+
+  - name: La Vashfol
+    tagline: 
+    region: NOR
+    location: Rouen
+    logo: la_vashfol
+    url: https://www.vashfol.fr
+
+  - name: Les Kadors 
+    tagline: La fanfare des jusqu'au-boutistes
+    region: OCC
+    location: Montpellier
+    logo: les_kadors
+    url: http://www.fanfaredeskadors.com
+
+  - name: Lady Jaja
+    tagline: Fanfare féminine et oenophile
+    region: OCC
+    location: Nîmes
+    logo: lady_jaja
+    url: https://fanfareladyjaja.wordpress.com
+
+  - name: Les judas
+    tagline: Fanfare iconoblaste
+    region: OCC
+    location: Aimargues
+    logo: les_judas
+    url: https://www.facebook.com/LesJudas
+
+  - name: Les Peillasses
+    tagline: 
+    region: OCC
+    location: Nîmes
+    logo: les_peillasses
+    url: https://www.facebook.com/fanfare.lespeillasses/?locale=fr_FR
+
+  - name: Attila et Huns II, III, IV
+    tagline: 
+    region: OCC
+    location: St Etienne d'Escattes
+    logo: attila
+    url: https://fanfareattila.wixsite.com/home
+
+  - name: Les Trous Balourds
+    tagline: Fanfare ambidextre Polymorphe
+    region: OCC
+    location: Toulouse
+    logo: les_trous_balours
+    url: https://collectif-fanfarnaum.fr/trous-balourds/
+
+  - name: Coco Fanfare Club
+    tagline: Fanfare tout terrain
+    region: OCC
+    location: Montpellier
+    logo: coco_fanfare_club
+    url: https://cocofanfareclub.fr
+
+  - name: La mécanique des Cuivres
+    tagline: 
+    region: OCC
+    location: Toulouse
+    logo: mecanique_des_cuivres
+    url: https://collectif-fanfarnaum.fr/la-mecanique-des-cuivres/
+
+  - name: Le Pompier Poney Club
+    tagline: Fanfare hyperactive
+    region: PAC
+    location: Marseille
+    logo: ppc
+    url: https://www.lepompierponeyclub.com
+
+  - name: Mamie Vortex
+    tagline: La fanfare riche en Oméga Teuf !
+    region: PAC
+    location: Marseille
+    logo: mamie_vortex
+    url: https://www.facebook.com/mamievortex/
+
+  - name: Mudanza
+    tagline: La fanfare qui déménage
+    region: PAC
+    location: Salon de provence
+    logo: mudanza
+    url: https://mudanza.fr
+
+  - name: Les Trompettes de Fallope
+    tagline: La fanfare qui prend soin de vous
+    region: PDL
+    location: Nantes
+    logo: trompettes_de_falloppe 
+    url: https://trompettesdefallope.com
+
+  - name: Terminus Brass Band
+    tagline: 
+    region: PDL
+    location: Nantes
+    logo: terminus
+    url: https://www.facebook.com/terminusbrassband/
+
+  - name: Les Roller Toaster
+    tagline: Fanfare du futur
+    region: PDL
+    location: Nantes
+    logo: roller_toaster
+    url: https://www.facebook.com/FanfareRollerToaster/
+
+  - name: Les WestCostars
+    tagline: Fanfare Bam bam
+    region: PDL
+    location: Nantes
+    logo: westcostars
+    url: https://www.facebook.com/WestCostars/
+
+  - name: Mefisto Brass
+    tagline: Live techno brass attitude
+    region: WLD
+    location: Milan, Italie
+    logo: mefisto
+    url: https://www.facebook.com/mefistobrass/
+
+  - name: Dirty Athens Brass Band
+    tagline: 
+    region: WLD
+    location: Athènes, Gèce
+    logo: dirty_athens
+    url: https://www.facebook.com/dirtyathensbrassband
+
+  - name: Brass United Social Club
+    tagline: The funk-led brassy supergroup you never knew you needed
+    region: WLD
+    location: Londres, Angleterre
+    logo: busc
+    url: https://www.facebook.com/BrassUnitedSC/

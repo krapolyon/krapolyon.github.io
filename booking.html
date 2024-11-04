@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="Formulaire de demande de devis pour engager les Krapos, on sera ravis de jouer chez vous."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Demande de devis pour les Krapos - Fanfare amphibienne</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap">
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="krapos-bem.css" />
+        <script src="nav-menu.js" defer></script>
+        <script src="carousel.js" defer></script>
+    </head>
+    <body class="body">
+        <!-- Header -->
+        <header class="header">
+            <img id="header-logo-img" class="header__logo" src="assets/images/common/LogoKrapo.svg" width="100px" heigh="100px" alt="Logo Krapo"/>
+            <nav id="main-nav" class="nav menu__nav" aria-label="Site menu">
+                <button id="btn-main-nav" class="btn btn--hamburger menu__nav-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav"></button>
+                <ul id="main-nav-list" class="list menu__list menu__list menu__list--hidden">
+                    <li class="list-item menu__list-item"><a href="index.html#home-page" class="link menu__link">Accueil</a></li>
+                    <li class="list-item menu__list-item"><a href="index.html#media-page" class="link menu__link">Médias</a></li>
+                    <li class="list-item menu__list-item"><a href="index.html#setlist-page" class="link menu__link">Répertoire</a></li>
+                    <li class="list-item menu__list-item"><a href="index.html#friends-page" class="link menu__link">Copains</a></li>
+                    <li class="list-item menu__list-item"><a href="index.html#contact-page" class="link menu__link">Contact</a></li>
+                </ul>
+            </nav>
+            <ul aria-label="Social networks menu" class="list header__list">
+                <li class="list-item"><a href="https://www.soundcloud.com/leskrapos" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
+                <li class="list-item"><a href="https://www.facebook.com/LesKrapos" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
+                <li class="list-item"><a href="https://www.youtube.com/@les-krapos" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
+                <li class="list-item"><a href="https://www.instagram.com/leskrapos" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
+            </ul>
+        </header>
+        <!-- Booking Page -->
+        <div id="booking-page" class="page">
+            <section id="booking-presentation" class="section page_section page_section--center page_section--no-p-on-mobile">
+                <div class="blob blob--booking">
+                    <img class="img img--rounded blob__img" src="assets/images/booking/photo_booking.jpg" alt="Réva, bassiste superstar derrière une forêt de trompettes. Crédit Photo : Gilles Reboisson."/>
+                </div>
+                <h1 class="h2">Demande de devis</h1>
+                <p>Utilisant uniquement des instruments acoustiques, les Krapos proposent une animation musicale acoustique et festive sans besoin d'amplification sonore, qui s'adapte à vos besoins et à vos contraintes.</p>
+                <p>Nos effectifs peuvent aller de 15 à 20 fanfaron.ne.s selon les disponibilités de chacun.e. Nous préconisons des sets d'environ 45 minutes, avec une pause de 15 minutes minimum entre chaque set.</p>
+                <p>Grâce à notre répertoire conséquent, avec près d'une cinquantaine de morceaux nous garantissons 3 heures de son sans répétition.</p>
+                <p>Si la fanfare est basée à Lyon, nous pouvons nous déplacer ailleurs en France, à l'étranger, vers l'infini, au-delà...</p>
+            </section>
+            <form id="booking-form" class="form">
+                    <label class="form__label" for="booking-name">* Votre nom / Le nom de votre organisme</label>
+                    <input class="form__input" type="text" id="booking-name" name="user_name" required />
+                    <label class="form__label" for="booking-mail">* Votre e-mail</label>
+                    <input class="form__input" type="email" id="booking-mail" name="user_email" required />
+                    <label class="form__label" for="booking-phone">* Un numéro de téléphone où on peut vous joindre</label>
+                    <input class="form__input" type="tel" id="booking-phone" name="user_phone" required />
+                    <label class="form__label" for="booking-msg">* Détaillez-nous votre projet<br>
+                        <ul>
+                            <li>Date</li> 
+                            <li>Temps de jeu, conditions</li>
+                            <li>Budget</li>
+                            <li>Défraiement</li>
+                            <li>Conditions d'accueil (repas, boisson, logement)</li>                    
+                        </ul>
+                    </label>
+                    <textarea class="form__textarea" id="booking-msg" name="user_message" required ></textarea>
+                    <input class="form__input" type="checkbox" name="user_consent" value="false" />
+                    <label class="form__label form__label--checkbox" >Je suis d'accord pour vous filer mes données perso vu que vous n'en ferez pas n'importe quoi.</label>
+                    <button class="btn form__btn btn--primary btn--with-text btn--send" id="booking-submit-button">Envoyer</button>
+            </form>
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <ul aria-label="Social networks menu" class="list footer__list">
+                <li class="list-item"><a href="https://www.soundcloud.com/leskrapos" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
+                <li class="list-item"><a href="https://www.facebook.com/LesKrapos" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
+                <li class="list-item"><a href="https://www.youtube.com/@les-krapos" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
+                <li class="list-item"><a href="https://www.instagram.com/leskrapos" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
+            </ul>
+            <p>Mentions Légales</p>
+        </footer>
+
+    </body>
+</html>

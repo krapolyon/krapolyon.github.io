@@ -1,0 +1,1146 @@
+/* NAMESPACE */
+@namespace url("http://www.w3.org/1999/xhtml");   /* default namespace */
+@namespace svg url('http://www.w3.org/2000/svg');
+
+
+/* FONTS */
+@font-face {
+    font-family: "Butler Extrabold";
+    src: url('assets/fonts/butler/Butler-ExtraBold.woff') format('woff');
+    src: url('assets/fonts/butler/Butler-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+/* || Generic Styles */
+
+/* ||| Global variable definitions */
+html {
+
+    --primary-color: #111c28;
+    --secondary-color: #F4AD2A;
+    --tertiary-color: #F5F1E3;
+    --link-color: #FF5976;
+
+    --gradient-1-start: #FF5875;
+    --gradient-1-end: #F5AE2D;
+    --gradient-1-angle: 60deg;
+
+    --gradient-2-start: #0A1b29;
+    --gradient-2-end:#0090AC;
+    --gradient-2-angle: 60deg;
+
+    --gradient-3-start: #0A1B29;
+    --gradient-3-end: #FF5875;
+    --gradient-3-angle: 60deg;
+
+    --gradient-4-start: #F87537;
+    --gradient-4-end: #FBA81F;
+    --gradient-4-angle: 60deg;
+
+    --body-margin-left: 1rem;
+    --body-margin-right: 1rem;
+
+    /* Make the menu take up all the visible width */
+    --header-width: 100vw - var(--body-margin-left) - var(--body-margin-right);
+    --header-height: 3rem;
+
+    
+    font-size: calc( 12px + calc(calc(6 * calc(100vh - 320px)) / 448));  /* 12 px for 320px wide and 18px for 768 px wide */
+}
+
+/* ||| Body - Main theme style */
+.body {
+    color: var(--primary-color);
+    background-color: var(--tertiary-color);
+
+    font-family: "Montserrat","Verdana", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+    margin: 0 var(--body-margin-left);
+}
+
+/* ||| List - Generic style */
+.list {
+    list-style-type: none;
+}
+
+.bullet__list {
+    list-style-type: disc;
+    padding-left:2em;
+}
+
+.bullet__list * + li {
+    margin-top: 0.5em;
+}
+
+/* ||| Links - Generic style */
+.link {
+    text-decoration: none;
+}
+
+/* LINKS */
+
+.link:link, .link:visited, .link:active, .link:hover { 
+    text-decoration: none; 
+    color: var(--primary-color);
+}
+
+.link:link, .link:visited { 
+  color: var(--primary-color);
+}
+
+.link:hover, .link:active { 
+  text-decoration: underline;
+}
+
+.btn__link:hover, .btn__link:active {
+    text-decoration:none;
+}
+
+/* ||| Headers  */
+.h1 {
+    font-size: 3.4rem;
+    font-family: "Butler Extrabold", "Garamond", "Arial";
+}
+
+.h2 {
+    font-size: 2.2rem;
+    font-family: "Butler Extrabold", "Garamond", "Arial";
+}
+
+.h2--with-lines {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* put a line before the title */
+.h2--with-lines::before {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 2em;
+    margin-right: 0.5em;
+    background: var(--primary-color);
+}
+
+/* put a line after the title */
+.h2--with-lines::after {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 2em;
+    margin-left: 0.5em;  
+    background: var(--primary-color);;
+}
+
+.h3 {
+    font-size: 1.8rem;
+    font-family: "Rajdhani Medium", "Tahoma";
+}
+
+.h3.h3--compact  * + * {
+    margin-top: 0;
+}
+
+/* ||| Text styling */
+.tagline {
+    font-size: 1.8rem;
+    font-family: "Rajdhani Medium", "Tahoma";
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.quote {
+    font-style: italic;
+}
+
+/* ||| Buttons - Generic buttons library */
+
+.btn {
+    font-size: inherit;
+    display: block; /* legacy value */
+    border: none;
+    cursor: pointer;
+}
+
+/* |||| Hamburger button - 3 lines which turns into a cross when clicked */
+
+/* The top slice */
+.btn--hamburger {
+    --hamburger-font-size: 0.5rem;
+    --hamburger-slice-width: 4 * var(--hamburger-font-size);
+    --hamburger-slice-height: 0.25rem;
+    --hamburger-slice-space: 0.30rem;
+
+    width: calc(var(--hamburger-slice-width));
+    height: calc(var(--hamburger-slice-height));
+    background-color: var(--primary-color);
+
+    font-size: var(--hamburger-font-size);
+    text-transform: uppercase;
+    vertical-align: top;
+
+    /* Add some margin above and below to make the clickable area square */
+    margin-top: calc( calc(var(--hamburger-slice-width) - var(--hamburger-slice-height)) / 2 );
+    margin-bottom: calc( calc(var(--hamburger-slice-width) - var(--hamburger-slice-height)) / 2 );
+    
+    position: relative;
+    bottom: calc(var(--hamburger-slice-height) + var(--hamburger-slice-space));
+}
+
+.btn--hamburger:hover {
+    background-color: var(--link-color);
+}
+
+.btn--hamburger--active {
+    transform:
+        translateY(calc(var(--hamburger-slice-height) + var(--hamburger-slice-space)))
+        rotate(45deg);
+}
+
+
+/* The middle slice */
+.btn--hamburger::before {
+    content: "";
+    display: block;
+    width: calc(var(--hamburger-slice-width));
+    height: calc(var(--hamburger-slice-height));
+    background-color: inherit;
+
+    position: absolute;
+    left: 0;
+    top: calc(var(--hamburger-slice-height) + var(--hamburger-slice-space));
+}
+
+.btn--hamburger--active::before {
+    opacity: 0;
+}
+
+/* The bottom slice */
+.btn--hamburger::after {
+    content: "";
+    display: block;
+    width: calc(var(--hamburger-slice-width));
+    height: calc(var(--hamburger-slice-height));
+    background-color: inherit;
+
+    position: absolute;
+    left: 0;
+    top: calc( 2 * calc(var(--hamburger-slice-height) + var(--hamburger-slice-space)));
+}
+
+.btn--hamburger--active::after {
+    transform: 
+        translateY(calc( -2 * var(--hamburger-slice-height)))
+        translateY(calc( -2 * var(--hamburger-slice-space)))
+        rotate(-90deg);
+}
+
+
+/* |||| Social network buttons - network icon is put as background image */
+
+.btn--social {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.btn--linktree {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--tertiary-color);
+
+    width: 10em;
+    height: 2em;
+    line-height: 2em;
+    padding-left: 3.5em;
+    border-radius: 0.5em;
+    margin: 0 auto;
+
+    text-decoration: none;
+
+    background-color: var(--primary-color);
+    background-color: green;
+    background-size: 1.5em 1.5em;
+    background-position: 1em 0.25em ;
+    background-repeat: no-repeat;
+
+}
+
+.btn--linktree:link, .btn--linktree:visited {
+    color: var(--tertiary-color);
+    background-color: var(--primary-color);
+}
+
+.btn--linktree:hover, .btn--linktree:active {
+    color: var(--tertiary-color);
+    background-color: var(--link-color);
+}
+
+.btn--facebook {
+    background-image: url("assets/images/common/social/facebook.svg");
+}
+
+.btn--facebook--light {
+    background-image: url("assets/images/common/social/facebook-light.svg");
+}
+
+.btn--instagram {
+    background-image: url("assets/images/common/social/instagram.svg");
+}
+
+.btn--instagram--light {
+    background-image: url("assets/images/common/social/instagram-light.svg");
+}
+
+.btn--soundcloud {
+    background-image: url("assets/images/common/social/soundcloud.svg");
+}
+
+.btn--soundcloud--light {
+    background-image: url("assets/images/common/social/soundcloud-light.svg");
+}
+
+.btn--youtube {
+    background-image: url("assets/images/common/social/youtube.svg");
+}
+
+.btn--youtube--light {
+    background-image: url("assets/images/common/social/youtube-light.svg");
+}
+
+/* |||| Primary button - gradient background */
+
+.btn--primary {
+    color: var(--tertiary-color);
+    background: linear-gradient(var(--gradient-1-angle), var(--gradient-1-start), var(--gradient-1-end));
+}
+
+.btn--primary:visited {
+    color: var(--tertiary-color);
+    background: linear-gradient(var(--gradient-1-angle), var(--gradient-1-start), var(--gradient-1-end));
+}
+
+.btn--primary:hover {
+    color: var(--tertiary-color);
+    background: var(--link-color);
+    text-decoration: none;
+}
+
+.btn--primary:active {
+    color: var(--tertiary-color);
+    background: var(--link-color);
+    text-decoration: none;
+}
+
+/* |||| Secondary button - dark background */
+
+.btn--secondary {
+    color: var(--tertiary-color);
+    background: var(--primary-color);
+}
+
+.btn--secondary:visited {
+    color: var(--tertiary-color);
+    background: var(--primary-color);
+}
+
+.btn--secondary:hover {
+    color: var(--tertiary-color);
+    background: var(--link-color);
+}
+
+.btn--secondary:active {
+    color: var(--tertiary-color);
+    background: var(--link-color);
+}
+
+.btn--linktree {
+
+}
+
+/* |||| Media button - Arrow pointing right in a circle */
+.btn--media {
+    --btn-media-radius: 2rem;
+    --btn-media-size: 2 * var(--btn-media-radius);
+    height: calc(var(--btn-media-size));
+    width: calc(var(--btn-media-size));
+    position: relative;
+    border-radius:var(--btn-media-radius);
+
+}
+
+/* use borders to draw an equilateral trianle shape */
+/* 0.866 is approximately sqrt(3)/2 */
+.btn--media::before {
+
+    --btn-media-arrow-size: var(--btn-media-radius); /* size of edge of arrow */
+    content: "";
+    display: block;
+    width: 0px; 
+    height: 0px; 
+    background: transparent;
+    border-top: calc(0.5 * var(--btn-media-arrow-size)) solid transparent;
+    border-bottom: calc(0.5 * var(--btn-media-arrow-size)) solid transparent;
+    border-left: calc(0.866 * var(--btn-media-arrow-size)) solid var(--tertiary-color);  
+    /* center arrow inside parent container */
+    position: absolute;
+    /* center arrow vertically */
+    top: calc(var(--btn-media-radius) - 0.5 * var(--btn-media-arrow-size));
+    /* first 2 terms center the arrow inside the button, third offset it a bit to the right to make it 'look' centered */
+    left: calc(var(--btn-media-radius) - 0.433 * var(--btn-media-arrow-size) + 0.1 * var(--btn-media-radius)); 
+}
+
+/* |||| Button with text - Icon on the left and text */
+
+.btn--with-text {
+    display: inline-flex;
+    border-radius: 2em;
+    padding-right: 1.25em;
+    align-items: center;
+
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn--with-text::before {
+    content: "";
+
+    width: 1.5em;
+    height: 2em;
+    background-repeat: no-repeat ;
+    background-position: center;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+}
+
+/* |||| Send button - Enveloppe icon before text in rounded rectangular shape */
+
+.btn--send::before {
+    background-image: url("assets/images/common/pictos/enveloppe.svg");
+}
+
+/* |||| listen button - Wave icon before text in rounded rectangular shape */
+
+.btn--listen::before {
+    background-image: url("assets/images/common/pictos/wave.svg");
+}
+
+/* |||| View button - youtube icon before text in rounded rectangular shape */
+.btn--view::before {
+    background-image: url("assets/images/common/social/youtube.svg");
+}
+
+
+/* |||| Up button - Arrow pointing up in a circle */
+.btn--up {
+
+    --btn-up-radius: 0.5em;
+    --btn-up-size: 2 * var(--btn-up-radius);
+
+    display: inline-block;
+    height: calc(var(--btn-up-size));
+    width: calc(var(--btn-up-size));
+    border-radius: var(--btn-up-radius);
+
+    margin-top: 0;
+    margin-left: calc(var(--btn-up-size));
+
+    position: relative;
+}
+
+/* use borders to draw an equilateral trianle shape */
+/* 0.866 is approximately sqrt(3)/2 */
+.btn--up::before {
+
+    --btn-up-arrow-size: var(--btn-up-radius); /* size of edge of arrow */
+    content: "";
+    display: block;
+    width: 0px; 
+    height: 0px; 
+    background: transparent;
+    border-left: calc(0.5 * var(--btn-up-arrow-size)) solid transparent;
+    border-right: calc(0.5 * var(--btn-up-arrow-size)) solid transparent;
+    border-bottom: calc(0.866 * var(--btn-up-arrow-size)) solid var(--tertiary-color);  
+    
+    /* center arrow inside parent container */
+    position: absolute;
+    /* center arrow horizontally */
+    left: calc(var(--btn-up-radius) - 0.5 * var(--btn-up-arrow-size));
+    /* first 2 terms center the arrow inside the button, third offset it a bit to the top to make it 'look' centered */
+    bottom: calc(var(--btn-up-radius) - 0.433 * var(--btn-up-arrow-size) + 0.1 * var(--btn-up-radius)); 
+}
+
+/* no display */
+
+.btn--no-display {
+    display: none;
+}
+
+/* ||| Image Styles */
+
+/* Make you define the width and height attributes of all img in html with soure image size */
+/* https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/ */
+.img {
+    max-width: 100%;
+    height: auto;
+}
+
+.img--rounded {
+    /* object-fit: cover; */
+    border-radius: 50%;
+}
+
+.img--dark-background {
+    background: var(--primary-color);
+}
+
+.blob {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 30rem 30rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.blob__img {
+    width: 15rem;
+    margin: 2rem;
+}
+
+.blob--home {
+    background-image: url("assets/images/home/blob_home.svg");
+    background-size: 18rem 18rem;
+    background-position: center;
+}
+
+.blob--audio {
+    background-image: url("assets/images/medias/blob_media_1.svg");
+    background-size: 18rem;
+    background-position: center;
+}
+
+.blob--video {
+    background-image: url("assets/images/medias/blob_media_2.svg");
+    background-size: 18rem;
+    background-position: center;
+}
+
+.blob--setlist {
+    background-image: url("assets/images/repertoire/blob_repertoire.svg");
+    background-size: 18rem;
+    background-position: center;
+}
+
+.blob--contact {
+    background-image: url("assets/images/contact/blob_contact.svg");
+    background-size: 18rem;
+    background-position: center;
+}
+
+.blob--booking {
+    background-image: url("assets/images/booking/blob_booking.svg");
+    background-size: 18rem;
+    background-position: center;
+}
+
+.figure {
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+
+/* || Header Styles */
+
+.header {
+
+    position: fixed;
+    z-index: 1;  /* make sure it is always on top */
+    top: 0;
+    left: calc(--body-margin-left);
+    width: calc(var(--header-width));
+
+    display: block flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: inherit;
+}
+
+.header__logo {
+    flex: 0;
+    height: var(--header-height);
+}
+
+.header__list {
+    display: none
+    /*
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    */
+}
+
+/* || Navigation menu */
+
+.menu__nav {
+    z-index: 1;
+    background-color: var(--tertiary-color);
+}
+
+.menu__list {
+    /* Make the menu as wide as the header */
+    --menu-width: var(--header-width);
+    
+    --menu-padding-top: 1rem;
+    --menu-padding-bottom: var(--menu-padding-top);
+
+    /* Put the menu list just below the header */
+    position: absolute;         /* Header has position: fixed so absolute positioning is relative to header top-left corner */
+    top: var(--header-height);
+    left: 0;
+
+    margin: 0;
+    padding: var(--menu-padding-top) 0;
+    width: calc(var(--menu-width));
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    list-style-type: none;
+    background-color: var(--tertiary-color);
+}
+
+.menu__list--hidden {
+    display: none;
+}
+
+.menu__list-item {
+    flex: 1;
+    line-height: 1.6em;
+    width: 100%;
+}
+
+.menu__link {
+}
+
+/* || Footer */
+.footer {
+    padding-stop: 1.5em;
+    padding-bottom: 4em;
+}
+
+.footer__list {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5em;
+
+    padding: 1em 0;
+
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right:0;
+
+    background: var(--tertiary-color);
+}
+
+/* Link Tree */
+
+.linktree__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    padding: 0;
+}
+
+/* || Page styles */
+
+.page {
+    padding-top: var(--header-height);  /* header is always visible */
+}
+
+/* lobotomized owl selector */
+/* https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/ */
+.page * + * {
+    margin-top: 1.5em;
+}
+
+.page__heading {
+    display: grid;
+    grid-template-columns: 1fr 4rem; /* make sure 2nd column is wide enough for any items to fit */
+    align-items: center;
+}
+
+.page__heading * + * {
+    margin-top: 0;
+}
+
+.page_section--center {
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30rem;
+}
+
+.page_section--no-p-on-mobile > p {
+    display: none;
+}
+
+.heading__subtitle {
+    grid-row: 2;
+    grid-column: 1 / 2;
+}
+
+.section__anchor {
+    position: relative;
+    display: block;
+    top: calc(-1* var(--header-height));*/
+}
+
+/* || Media styles */
+
+.cards__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+    gap: 1em;
+}
+
+.cards__list > * + * {
+    margin-top: 0;
+}
+
+.card {
+    display: grid;
+    column-gap: 1em;
+    row-gap: 0.5em;
+
+    flex: 0;
+}
+
+.card > * + * {
+    margin-top: 0;
+}
+
+/* https://webkit.org/blog/13096/css-has-pseudo-class/ */
+.card:has(.card__link:is(:hover, :active)) {
+    background: var(--link-color);
+    border-radius: 2em;
+}
+
+.card__img {
+    width: 100%;
+    height: 100%;
+}
+
+.card__title {
+    font-family: "Montserrat", "Verdana";
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card__copy {
+    font-size: 0.875rem;
+}
+
+.card__link {
+    grid-column: 1 /-1;
+    grid-row: 1 / -1;
+}
+
+
+/* Two columns equal-width */
+.card--type-1 {
+    grid-template-columns: 10em 10em;
+    grid-template-rows: minmax(auto,auto) 1fr 2em;
+}
+
+.card__media--type-1 {
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+.card__body--type-1 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.card__header--type-1 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.card__footer--type-1 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+/* Single column 16/9 ratio for image in 1st row */
+.card--type-2 {
+    /* 16/9 ratio for image in 1st row */
+    grid-template-columns: 18.75em;
+    grid-template-rows: calc((9 / 16.) * 18.75em)  minmax(auto,auto) 1fr 2em; 
+}
+
+.card__media--type-2 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.card__header--type-2 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+
+.card__body--type-2 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.card__footer--type-2 {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+/* media on the left and wider text zone (16:9 ratio) on the right */
+.card--type-3 {
+    grid-template-columns: 9em 16em;
+    grid-template-rows: minmax(2em,auto) 1fr 2em;
+}
+
+.card__media--type-3 {
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+.card__body--type-3 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.card__header--type-3 {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 1em;
+}
+
+.card__footer--type-3 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+/* Card List */
+.card__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.card__list > * + * {
+    margin-top: 0;
+}
+
+.card__list-item {
+    flex: 0 70vw;
+
+}
+
+/* || Carousel */
+/* https://www.w3.org/WAI/tutorials/carousels/full-code/ */
+.carousel {
+
+    --carousel-width: 20.5em;
+    --carousel-height: 11em;
+
+    --carousel-btn-width: 2em;
+    --carousel-btn-height: var(--carousel-height);
+
+    --carousel-padding-horizontal: 2em + var(--carousel-btn-width);
+    --carousel-padding-slidenav: 2.25em;
+
+    display: block;
+    overflow: hidden;
+
+    width: var(--carousel-width);
+    height: var(--carousel-height);
+    
+    padding: 0 calc(var(--carousel-padding-horizontal));
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    position:relative;
+
+}
+
+.carousel * + * {
+    margin-top: 0;
+}
+
+.carousel.carousel--type-1 {
+    --carousel-width: 21em;
+    --carousel-height: 11em;
+}
+
+.carousel.carousel--type-2 {
+    --carousel-width: 20em;
+    --carousel-height: 17em;
+}
+
+
+.carousel--with-slidenav {
+    padding-bottom: var(--carousel-padding-slidenav);
+}
+
+.carousel__list {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel__slide {
+    display: block;
+
+    width: var(--carousel-width);
+    height: var(--carousel-height);
+
+    padding: 0;
+    border: none;
+    margin: 0 calc(var(--carousel-padding-horizontal));
+
+    overflow: hidden;
+    visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left:0;
+
+    transition: left .6s ease-out;
+}
+
+.carousel__slide.carousel__slide--current {
+    visibility: visible;
+    left: 0;
+}
+
+.carousel__slide.carousel__slide--next {
+    left: 100%;
+}
+
+.carousel__slide.carousel__slide--prev {
+    left: -100%;
+}
+
+
+.carousel__btn {
+    width: var(--carousel-btn-width);
+    height: var(--carousel-btn-height);
+    border:0;
+
+    position: absolute;
+    top: calc(0.5 * var(--carousel-height) - 0.5 * var(--carousel-btn-height));
+
+    
+    background: var(--tertiary-color);
+    padding: 0;
+    transition: padding .4s ease-out;
+
+    background-size: var(--carousel-btn-width) var(--carousel-btn-height);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.carousel__btn--prev {
+    left: 0;
+    background-image: url("assets/images/common/pictos/chevron-left.svg");
+}
+
+.carousel__btn--next {
+    right: 0;
+    border-radius: 0 0 0.25em 0.25em;
+    background-image: url("assets/images/common/pictos/chevron-right.svg");
+
+}
+
+.carousel__nav {
+    position: absolute;
+    bottom: 0em;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel__nav-item {
+    display: inline-block;
+    margin: 0 0.5em;
+
+}
+
+.carousel__nav-btn {
+    --carousel-nav-btn-radius: 1.1em;
+    --carousel-nav-btn-size: 2 * var(--carousel-nav-btn-radius);
+    display: block;
+    height: calc(var(--carousel-nav-btn-size));
+    width: calc(var(--carousel-nav-btn-size));
+    line-height: calc(var(--carousel-nav-btn-size));
+
+    position: relative;
+    border-radius:var(--carousel-nav-btn-radius);
+}
+
+/* use borders to draw an equilateral trianle shape */
+/* 0.866 is approximately sqrt(3)/2 */
+.carousel__nav-btn[data-action="start"]::before {
+
+    --carousel-nav-btn-arrow-size: var(--carousel-nav-btn-radius); /* size of edge of arrow */
+    content: "";
+    display: inline-block;
+    width: 0px; 
+    height: 0px; 
+    background: transparent;
+    border-top: calc(0.5 * var(--carousel-nav-btn-arrow-size)) solid transparent;
+    border-bottom: calc(0.5 * var(--carousel-nav-btn-arrow-size)) solid transparent;
+    border-left: calc(0.866 * var(--carousel-nav-btn-arrow-size)) solid var(--tertiary-color);  
+    /* center arrow inside parent container */
+    position: absolute;
+    /* center arrow vertically */
+    top: calc(var(--carousel-nav-btn-radius) - 0.5 * var(--carousel-nav-btn-arrow-size));
+    /* first 2 terms center the arrow inside the button, third offset it a bit to the right to make it 'look' centered */
+    left: calc(var(--carousel-nav-btn-radius) - 0.433 * var(--carousel-nav-btn-arrow-size) + 0.1 * var(--carousel-nav-btn-radius)); 
+}
+
+/* use borders to draw an equilateral trianle shape */
+/* 0.866 is approximately sqrt(3)/2 */
+.carousel__nav-btn[data-action="stop"]::before {
+
+    --carousel-nav-btn-stop-size: var(--carousel-nav-btn-radius); /* size of edge of arrow */
+
+    content: "";
+    display: inline-block;
+    width: var(--carousel-nav-btn-stop-size); 
+    height: var(--carousel-nav-btn-stop-size); 
+    background: var(--tertiary-color);
+ 
+    /* center arrow square parent container */
+    position: absolute;
+    top: calc(var(--carousel-nav-btn-radius) - 0.5 * var(--carousel-nav-btn-stop-size));
+    /* first 2 terms center the arrow inside the button, third offset it a bit to the right to make it 'look' centered */
+    left: calc(var(--carousel-nav-btn-radius) - 0.5 * var(--carousel-nav-btn-stop-size)); 
+}
+
+.carousel__nav-btn--current{
+    background: var(--link-color);
+}
+
+
+/* || Form */
+
+.form {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-columns: 1.5em 1fr auto 1fr 1.5em;
+    column-gap: 1em;
+
+}
+
+.form * + * {
+    margin-top: 1em;
+}
+
+.form__label{
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+
+  grid-column: 1 / -1;
+}
+
+.form__label--checkbox {
+    display: flex;
+    grid-column: 2 / -1;
+}
+
+.form__input{
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+
+  border: none;
+  width: 100%;
+
+  grid-column: 1 / -1;
+}
+
+.form__input[type="checkbox"] {
+  width: 1.5em;
+  grid-column: 1;
+}
+
+.form__textarea{
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  
+  width: 100%;
+  height: 10em;
+  border: none;
+
+  overflow: auto;
+  grid-column: 1 / -1;
+}
+
+.form__btn {
+    grid-column: 3;
+}
+
+/* SVG styling */
+
+
+svg|path#France {
+    stroke : none; 
+    stroke-width: 1; 
+    fill-rule: evenodd;
+    fill: url(#linearGradient-1);
+}
+
+
+svg|path#ARA{
+  stroke: #FFFFFF;
+  stroke-width: 2;
+  fill: #F4AD2A;
+  opacity: 0;
+}
+
+svg|path#ARA:hover {
+    opacity: 1;
+}
