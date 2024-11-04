@@ -45,9 +45,17 @@ html {
     /* Make the menu take up all the visible width */
     --header-width: 100vw - var(--body-margin-left) - var(--body-margin-right);
     --header-height: 3rem;
+    --header-padding-top: 1rem;
 
     
-    font-size: calc( 10px + calc(calc(8 * calc(100vh - 320px)) / 448));  /* 10 px for 320px wide and 18px for 768 px wide */
+    font-size: calc( 13px + calc(calc(19 * calc(100vw - 320px)) / 480));  /* 10 px for 320px wide and 29px for 800px wide */
+}
+
+/* stop increasing font size at some point (here it is already a bit too much...)
+@media (min-width: 800px) {
+    html{
+        font-size: 29px;
+    }
 }
 
 /* ||| Body - Main theme style */
@@ -102,12 +110,12 @@ html {
 
 /* ||| Headers  */
 .h1 {
-    font-size: 3.4rem;
+    font-size: 2.46rem;
     font-family: "Butler Extrabold", "Garamond", "Arial";
 }
 
 .h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-family: "Butler Extrabold", "Garamond", "Arial";
 }
 
@@ -147,7 +155,7 @@ html {
 
 /* ||| Text styling */
 .tagline {
-    font-size: 1.8rem;
+    font-size: 1.46rem;
     font-family: "Rajdhani Medium", "Tahoma";
 }
 
@@ -368,7 +376,7 @@ html {
 
 /* |||| Media button - Arrow pointing right in a circle */
 .btn--media {
-    --btn-media-radius: 2rem;
+    --btn-media-radius: 1.23rem;
     --btn-media-size: 2 * var(--btn-media-radius);
     height: calc(var(--btn-media-size));
     width: calc(var(--btn-media-size));
@@ -505,55 +513,48 @@ html {
 .blob {
     width: 100%;
     background-repeat: no-repeat;
-    background-size: 30rem 30rem;
+    background-size: 14rem auto;
     display: flex;
     justify-content: space-around;
 }
 
 .blob__img {
-    width: 15rem;
-    margin: 2rem;
+    width: 13rem;
+    margin: 1rem;
 }
 
 .blob--home {
     background-image: url("assets/images/home/blob_home.svg");
-    background-size: 18rem 18rem;
     background-position: center;
 }
 
 .blob--audio {
     background-image: url("assets/images/medias/blob_media_1.svg");
-    background-size: 18rem;
     background-position: center;
 }
 
 .blob--video {
     background-image: url("assets/images/medias/blob_media_2.svg");
-    background-size: 18rem;
     background-position: center;
 }
 
 .blob--setlist {
     background-image: url("assets/images/setlist/blob_setlist.svg");
-    background-size: 18rem;
     background-position: center;
 }
 
 .blob--contact {
     background-image: url("assets/images/contact/blob_contact.svg");
-    background-size: 18rem;
     background-position: center;
 }
 
 .blob--booking {
     background-image: url("assets/images/booking/blob_booking.svg");
-    background-size: 18rem;
     background-position: center;
 }
 
 .figure {
-    /*display: flex;*/
-    max-width: 80vw;
+    width: 80% auto;
     margin: 0 auto;
     /*justify-content: space-around;*/
 }
@@ -566,8 +567,10 @@ html {
     position: fixed;
     z-index: 1;  /* make sure it is always on top */
     top: 0;
-    left: calc(--body-margin-left);
+
+    left: calc(var(--body-margin-left));
     width: calc(var(--header-width));
+    padding-top: var(--header-padding-top);
 
     display: block flex;
     flex-direction: row;
@@ -607,7 +610,7 @@ html {
 
     /* Put the menu list just below the header */
     position: absolute;         /* Header has position: fixed so absolute positioning is relative to header top-left corner */
-    top: var(--header-height);
+    top: calc(var(--header-height) + var(--header-padding-top));
     left: 0;
 
     margin: 0;
@@ -675,14 +678,14 @@ html {
 /* || Page styles */
 
 .page {
-    padding-top: var(--header-height);  /* header is always visible */
+    padding-top: calc(var(--header-height) + var(--header-padding-top) + 1rem);  /* header is always visible  + 1rem padding */
 }
 
 
 .page {
     margin-left: auto;
     margin-right: auto;
-    max-width: 30rem;
+    max-width: 800px;
 }
 
 /* lobotomized owl selector */
@@ -714,13 +717,14 @@ html {
 
 .heading__subtitle {
     grid-row: 2;
-    grid-column: 1 / 2;
+    grid-column: 1 / -1;
+    grid-row-gap: 0.46rem;
 }
 
 .section__anchor {
     position: relative;
     display: block;
-    top: calc(-1* var(--header-height));*/
+    top: calc(-1 * calc(var(--header-height) + var(--header-padding-top)));*/
 }
 
 /* || Media styles */
@@ -742,8 +746,8 @@ html {
 
 .card {
     display: grid;
-    column-gap: 1em;
-    row-gap: 0.5em;
+    column-gap: 0.6rem;
+    row-gap: 0.5rem;
 
     flex: 0;
 }
@@ -781,8 +785,8 @@ html {
 
 /* Two columns equal-width */
 .card--type-1 {
-    grid-template-columns: 10em 10em;
-    grid-template-rows: minmax(auto,auto) 1fr 2em;
+    grid-template-columns: 9rem 9rem;
+    grid-template-rows: minmax(auto,auto) 1fr 2rem;
 }
 
 .card__media--type-1 {
@@ -805,11 +809,11 @@ html {
     grid-row: 3;
 }
 
-/* Single column 16/9 ratio for image in 1st row */
+/* Single column 16/9 (9/16=0.5625) ratio for image in 1st row */
 .card--type-2 {
     /* 16/9 ratio for image in 1st row */
-    grid-template-columns: 18.75em;
-    grid-template-rows: calc((9 / 16.) * 18.75em)  minmax(auto,auto) 1fr 2em; 
+    grid-template-columns: 18.6rem;
+    grid-template-rows: calc(0.5625 * 18.6rem)  minmax(auto,auto) 1fr 2em; 
 }
 
 .card__media--type-2 {
@@ -835,7 +839,7 @@ html {
 
 /* media on the left and wider text zone (16:9 ratio) on the right */
 .card--type-3 {
-    grid-template-columns: 9em 16em;
+    grid-template-columns: 7.2rem 12.8rem;
     grid-template-rows: minmax(2em,auto) 1fr 2em;
 }
 
@@ -880,13 +884,13 @@ html {
 /* https://www.w3.org/WAI/tutorials/carousels/full-code/ */
 .carousel {
 
-    --carousel-width: 20.5rem;
+    --carousel-width: 18.6rem;
     --carousel-height: 11rem;
 
-    --carousel-btn-width: 2rem;
+    --carousel-btn-width: 1.5rem;
     --carousel-btn-height: var(--carousel-height);
 
-    --carousel-padding-horizontal: 2rem + var(--carousel-btn-width);
+    --carousel-padding-horizontal: 0.5rem + var(--carousel-btn-width);
     --carousel-padding-slidenav: 2.25rem;
 
     display: block;
@@ -910,12 +914,12 @@ html {
 }
 
 .carousel.carousel--type-1 {
-    --carousel-width: 21rem;
+    --carousel-width: 18.6rem;
     --carousel-height: 11rem;
 }
 
 .carousel.carousel--type-2 {
-    --carousel-width: 20rem;
+    --carousel-width: 18.6rem;
     --carousel-height: 17rem;
 }
 
@@ -1145,9 +1149,11 @@ svg|path#ARA{
   stroke: #FFFFFF;
   stroke-width: 2;
   fill: #F4AD2A;
-  opacity: 0;
+  opacity: 1;
 }
 
 svg|path#ARA:hover {
     opacity: 1;
 }
+
+
