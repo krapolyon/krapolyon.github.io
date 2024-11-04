@@ -51,7 +51,6 @@ def make_html(config, template_name, html_name=None):
 	    autoescape=select_autoescape()
 	)
 
-	template_name = "index.html"
 	template = env.get_template(template_name)
 
 	if html_name is None:
@@ -107,5 +106,7 @@ def make_setlist_image(config):
 
 if __name__ == '__main__':
 	config = load_config(CONFIG_FILE)
-	make_setlist_image(config)
+	# make_setlist_image(config)
 
+	for template_name in ["friends.html", "media.html", "setlist.html"]:
+		make_html(config, template_name)

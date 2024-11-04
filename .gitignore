@@ -1,3 +1,9 @@
+# files generated from template
+/media.html
+/friends.html
+/setlist.html 
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
