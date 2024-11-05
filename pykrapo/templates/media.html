@@ -37,65 +37,77 @@
             </ul>
         </header>
         <!-- Media Page -->
-        <div id="media-page" class="page">
-            <section id="media-albums" class="section page_section">
-                <div class="blob blob--audio">
-                    <img class="img img--rounded blob__img" src="assets/images/medias/photo_media_1.jpg" alt="Abel, trompettiste aux lunettes Fantaisie. Crédit Photo : Objectif Images Montpellier."/>
-                </div>
-                <h2 class="h2">Les albums</h2>
-                <p>Comme on est généreux, il y a 3 albums en écoute gratuite sur SoundCloud.</p>
-                <section id="media-audio-carousel" class="carousel">
-                    <ul class="list carousel__list">
-                    {% for audio in media.audio %}
-                        <li id="media-album-{{ loop.index }}" class="list-item carousel__slide">
-                            <div class="card card--type-1">
-                                <div class="card__media card__media--type-1">
-                                    <img class="img card__img" width="{{ audio.artwork.width }}" height="{{ audio.artwork.height }}" src="assets/images/medias/audio/{{ audio.artwork.file }}"/>
-                                </div>
-                                <div class="card__header card__header--type-1">
-                                    <p class="card__title">{{ audio.title }}</p>
-                                </div>
-                                <div class="card__body card__body--type-1">
-                                    <p class="card__copy">{{ audio.year }}</p>
-                                </div>
-                                <div class="card__footer card__footer--type-1">
-                                    <a href="{{ audio.url }}" target="_blank" class="link btn btn--primary btn--listen btn--with-text">&Eacutecouter</a>
-                                </div>
-                            </div>
-                        </li>
-                    {% endfor %}
-                    </ul>
+        <div id="media-page" class="page page--media">
+            <div class="wrapper--section-media-albums">
+                <section id="media-albums" class="section page_section section--media-albums">
+                    <div class="wrapper--media-albums-img">
+                        <div class="blob blob--audio">
+                            <img class="img img--rounded blob__img" src="assets/images/medias/photo_media_1.jpg" alt="Abel, trompettiste aux lunettes Fantaisie. Crédit Photo : Objectif Images Montpellier."/>
+                        </div>
+                    </div>
+                    <div class="wrapper--media-albums">
+                        <h2 class="h2">Les albums</h2>
+                        <p>Comme on est généreux, il y a 3 albums en écoute gratuite sur SoundCloud.</p>
+                        <section id="media-audio-carousel" class="carousel">
+                            <ul class="list carousel__list">
+                            {% for audio in media.audio %}
+                                <li id="media-album-{{ loop.index }}" class="list-item carousel__slide">
+                                    <div class="card card--type-1">
+                                        <div class="card__media card__media--type-1">
+                                            <img class="img card__img" width="{{ audio.artwork.width }}" height="{{ audio.artwork.height }}" src="assets/images/medias/audio/{{ audio.artwork.file }}"/>
+                                        </div>
+                                        <div class="card__header card__header--type-1">
+                                            <p class="card__title">{{ audio.title }}</p>
+                                        </div>
+                                        <div class="card__body card__body--type-1">
+                                            <p class="card__copy">{{ audio.year }}</p>
+                                        </div>
+                                        <div class="card__footer card__footer--type-1">
+                                            <a href="{{ audio.url }}" target="_blank" class="link btn btn--primary btn--listen btn--with-text">&Eacutecouter</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </section>
+                    </div>
                 </section>
-            </section>
-            <section id="media-videos" class="section page_section">
-                <div class="blob blob--video">
-                    <img class="img img--rounded blob__img" src="assets/images/medias/photo_media_2.jpg" alt="Nadia, notre tubiste sous la pluie. Crédit Photo : Les Krapos."/>
-                </div>
-                <h2 class="h2">Les vidéos</h2>
-                <p>Une manière de revoir les Krapos avec des images qui bougent.</p>
-                <section id="media-video-carousel" class="carousel">
-                    <ul class="list carousel__list">
-                    {% for video in media.video %}
-                        <li id="media-video-{{ loop.index }}" class="list-item carousel__slide">
-                            <div class="card card--type-2">
-                                <div class="card__media card__media--type-2">
-                                    <img width="{{ video.artwork.width }}"  height="{{ video.artwork.height }}" class="img card__img" src="assets/images/medias/video/{{ video.artwork.file }}"/>
-                                </div>
-                                <div class="card__header card__header--type-2">
-                                    <p class="card__title">{{ video.tune }}</p>
-                                </div>
-                                <div class="card__body card__body--type-2">
-                                    <p class="card__copy">{{ video.reference }}</p>
-                                </div>
-                                <div class="card__footer card__footer--type-2">
-                                    <a href="{{ video.url }}" target="_blank" class="link btn btn--primary btn--view btn--with-text">Regarder</a>
-                                </div>
-                            </div>
-                        </li>
-                    {% endfor %}
-                    </ul>
+            </div>
+            <div class="wrapper--section-media-videos">
+                <section id="media-videos" class="section page_section section--media-videos">
+                    <div class="wrapper--media-videos-img">
+                        <div class="blob blob--video">
+                            <img class="img img--rounded blob__img" src="assets/images/medias/photo_media_2.jpg" alt="Nadia, notre tubiste sous la pluie. Crédit Photo : Les Krapos."/>
+                        </div>
+                    </div>
+                    <div class="wrapper--media-videos">
+                        <h2 class="h2">Les vidéos</h2>
+                        <p>Une manière de revoir les Krapos avec des images qui bougent.</p>
+                        <section id="media-video-carousel" class="carousel">
+                            <ul class="list carousel__list">
+                            {% for video in media.video %}
+                                <li id="media-video-{{ loop.index }}" class="list-item carousel__slide">
+                                    <div class="card card--type-2">
+                                        <div class="card__media card__media--type-2">
+                                            <img width="{{ video.artwork.width }}"  height="{{ video.artwork.height }}" class="img card__img" src="assets/images/medias/video/{{ video.artwork.file }}"/>
+                                        </div>
+                                        <div class="card__header card__header--type-2">
+                                            <p class="card__title">{{ video.tune }}</p>
+                                        </div>
+                                        <div class="card__body card__body--type-2">
+                                            <p class="card__copy">{{ video.reference }}</p>
+                                        </div>
+                                        <div class="card__footer card__footer--type-2">
+                                            <a href="{{ video.url }}" target="_blank" class="link btn btn--primary btn--view btn--with-text">Regarder</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </section>
+                    </div>
                 </section>
-            </section>
+            </div>
         </div>
         <!-- Footer -->
         <footer class="footer">

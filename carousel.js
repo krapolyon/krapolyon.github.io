@@ -385,20 +385,26 @@ var myCarousel = (function() {
   };
 });
 
-var carousel_audio = new myCarousel();
-carousel_audio.init({
-  id: 'media-audio-carousel',
-  slidenav: true,
-  animate: true,
-  startAnimated: true,
-  class: 'carousel--type-1'
-});
 
-var carousel_video = new myCarousel();
-carousel_video.init({
-  id: 'media-video-carousel',
-  slidenav: true,
-  animate: true,
-  startAnimated: true,
-  class: 'carousel--type-2'
-});
+const mediaQueryList = window.matchMedia("(min-width: 768px)");
+
+// Set up carousel only for mobile devices
+if (!mediaQueryList.matches) { 
+  var carousel_audio = new myCarousel();
+  carousel_audio.init({
+    id: 'media-audio-carousel',
+    slidenav: true,
+    animate: true,
+    startAnimated: true,
+    class: 'carousel--type-1'
+  });
+
+  var carousel_video = new myCarousel();
+  carousel_video.init({
+    id: 'media-video-carousel',
+    slidenav: true,
+    animate: true,
+    startAnimated: true,
+    class: 'carousel--type-2'
+  });
+}
