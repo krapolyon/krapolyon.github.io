@@ -393,18 +393,18 @@ if (!mediaQueryList.matches) {
   var carousel_audio = new myCarousel();
   carousel_audio.init({
     id: 'media-audio-carousel',
-    slidenav: true,
-    animate: true,
-    startAnimated: true,
+    slidenav: false,
+    animate: false,
+    startAnimated: false,
     class: 'carousel--type-1'
   });
 
   var carousel_video = new myCarousel();
   carousel_video.init({
     id: 'media-video-carousel',
-    slidenav: true,
-    animate: true,
-    startAnimated: true,
+    slidenav: false,
+    animate: false,
+    startAnimated: false,
     class: 'carousel--type-2'
   });
 }
