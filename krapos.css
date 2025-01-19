@@ -190,6 +190,7 @@ html {
     display: block; /* legacy value */
     border: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
 /* |||| Hamburger button - 3 lines which turns into a cross when clicked */
