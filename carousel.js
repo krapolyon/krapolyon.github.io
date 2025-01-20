@@ -388,23 +388,33 @@ var myCarousel = (function() {
 
 const mediaQueryList = window.matchMedia("(min-width: 768px)");
 
-// Set up carousel only for mobile devices
-if (!mediaQueryList.matches) { 
-  var carousel_audio = new myCarousel();
-  carousel_audio.init({
-    id: 'media-audio-carousel',
-    slidenav: false,
-    animate: false,
-    startAnimated: false,
-    class: 'carousel--type-1'
-  });
+function handleWidthChange(mql) {
+  // Set up carousel only for mobile devices
+  if (!mediaQueryList.matches) { 
+    var carousel_audio = new myCarousel();
+    carousel_audio.init({
+      id: 'media-audio-carousel',
+      slidenav: false,
+      animate: false,
+      startAnimated: false,
+      class: 'carousel--type-1'
+    });
 
-  var carousel_video = new myCarousel();
-  carousel_video.init({
-    id: 'media-video-carousel',
-    slidenav: false,
-    animate: false,
-    startAnimated: false,
-    class: 'carousel--type-2'
-  });
+    var carousel_video = new myCarousel();
+    carousel_video.init({
+      id: 'media-video-carousel',
+      slidenav: false,
+      animate: false,
+      startAnimated: false,
+      class: 'carousel--type-2'
+    });
+
+  }
 }
+
+// Run the width change handle once
+handleWidthChange(mediaQueryList);
+
+// Add the callback function as a listener to the query list.
+mediaQueryList.addEventListener("change", handleWidthChange);
+
