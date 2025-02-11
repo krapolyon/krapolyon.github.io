@@ -10,7 +10,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap">
-        <link rel="stylesheet" href="reset.css" />
         <link rel="stylesheet" href="krapos.css" />
         <script src="nav-menu.js" defer></script>
     </head>
@@ -18,32 +17,29 @@
         <!-- Header -->
         <header class="header">
             <img id="header-logo-img" class="header__logo" src="assets/images/common/LogoKrapo.svg" width="100px" heigh="100px" alt="Logo Krapo"/>
-            <nav id="main-nav" class="nav menu__nav" aria-label="Site menu">
-                <button id="btn-main-nav" class="btn btn--hamburger menu__nav-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav"></button>
-                <ul id="main-nav-list" class="list menu__list menu__list menu__list--hidden">
-                    <li class="list-item menu__list-item"><a href="index.html" class="link menu__link">Accueil</a></li>
-                    <li class="list-item menu__list-item"><a href="media.html" class="link menu__link">Médias</a></li>
-                    <li class="list-item menu__list-item"><a href="setlist.html" class="link menu__link">Répertoire</a></li>
-                    <li class="list-item menu__list-item"><a href="friends.html" class="link menu__link">Copains</a></li>
-                    <li class="list-item menu__list-item"><a href="contact.html" class="link menu__link">Contact</a></li>
+            <nav id="main-nav" class="menu header__menu" aria-label="Site menu">
+                <button id="btn-main-nav" class="btn btn--hamburger header__menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav"></button>
+                <ul id="main-nav-list" class="list menu__list menu__list--hidden">
+                    <li class="list__item menu__item"><a href="index.html" class="link menu__link">Accueil</a></li>
+                    <li class="list__item menu__item"><a href="media.html" class="link menu__link">Médias</a></li>
+                    <li class="list__item menu__item"><a href="setlist.html" class="link menu__link">Répertoire</a></li>
+                    <li class="list__item menu__item"><a href="friends.html" class="link menu__link">Copains</a></li>
+                    <li class="list__item menu__item"><a href="contact.html" class="link menu__link">Contact</a></li>
                 </ul>
             </nav>
-            <ul aria-label="Social networks menu" class="list header__list">
-                <li class="list-item"><a href="https://www.soundcloud.com/leskrapos" target="_blank" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
-                <li class="list-item"><a href="https://www.facebook.com/LesKrapos" target="_blank" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
-                <li class="list-item"><a href="https://www.youtube.com/@les-krapos" target="_blank" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
-                <li class="list-item"><a href="https://www.instagram.com/leskrapos" target="_blank" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
-            </ul>
+            <div class="social header__social" aria-label="Social networks menu">
+                <ul aria-label="Social networks menu" class="list social__list">
+                    <li class="list__item social__item"><a href="https://www.soundcloud.com/leskrapos" target="_blank" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
+                    <li class="list__item social__item"><a href="https://www.facebook.com/LesKrapos" target="_blank" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
+                    <li class="list__item social__item"><a href="https://www.youtube.com/@les-krapos" target="_blank" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
+                    <li class="list__item social__item"><a href="https://www.instagram.com/leskrapos" target="_blank" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
+                </ul>
+            </div>
         </header>
         <!-- Friends Page -->
         <div id="friends-page" class="page page--friends">
+            <div id="friends-page" class="page page--friends">
             <section id="friends-presentation" class="section page_section section--friends">
-                <div class="wrapper--friends-text">
-                    <h2 class="h2"><a id="friends-anchor" class="section__anchor"></a>Les copains</h2>
-                    <p class="text-block">Au fur et à mesure de nos pérégrinations on s'est fait des copains un peu partout en France, voire même un peu plus loin.</p>
-                    <p class="text-block">Comme on trouve qu'ils sont eux aussi vachement cool, on te propose d'aller voir leurs sites ouebs aussi.</p>
-                    <p class="text-block">On t'as oublié ? Laisse-nous un <a href="contact.html">message</a>, qu'on y remédie !</p>
-                </div>
                 <div class="wrapper--friends-map">
                     <figure class="figure">
                         <svg viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -68,22 +64,28 @@
                         </svg>
                     </figure>
                 </div>
+                <div class="wrapper--friends-text">
+                    <h2 class="h2">Les copains</h2>
+                    <p class="text text--long">Au fur et à mesure de nos pérégrinations on s'est fait des copains un peu partout en France, voire même un peu plus loin.</p>
+                    <p class="text text--long">Comme on trouve qu'ils sont eux aussi vachement cool, on te propose d'aller voir leurs sites ouebs aussi.</p>
+                    <p class="text text--long">On t'as oublié ? Laisse-nous un <a href="contact.html">message</a>, qu'on y remédie !</p>
+                </div>
                 {%- for region, region_friends in friends|groupby("region") %}
                 <div class="wrapper--friends-regions">
                     <section class="section section--friends-region">
-                        <h3 class="h3 h3--compact"><a id="friends-region-{{ region }}-anchor" class="section__anchor"></a>{{ regions[region] }}<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
+                        <h3 class="h3 h3"><a id="friends-region-{{ region }}-anchor" class="section__anchor"></a>{{ regions[region] }}<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
                         <ol class="list cards__list">
                         {%- for friend in region_friends %}
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/{{ region }}/{{ friend.logo }}.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">{{ friend.name }}</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">{{ friend.tagline if friend.tagline is not none }}</p>
+                                        <p class="card__copy quote">{{ friend.tagline if friend.tagline is not none }}</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
                                         <p class="card_copy">{{ friend.location }}</p>
@@ -98,12 +100,15 @@
         </div>
         <!-- Footer -->
         <footer class="footer">
-            <ul aria-label="Social networks menu" class="list footer__list">
-                <li class="list-item"><a href="https://www.soundcloud.com/leskrapos" target="_blank" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
-                <li class="list-item"><a href="https://www.facebook.com/LesKrapos" target="_blank" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
-                <li class="list-item"><a href="https://www.youtube.com/@les-krapos" target="_blank" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
-                <li class="list-item"><a href="https://www.instagram.com/leskrapos" target="_blank" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
-            </ul>
+            <div class="social footer__social" aria-label="Social networks menu">
+                <ul aria-label="Social networks menu" class="list social__list">
+                    <li class="list__item social__item"><a href="https://www.soundcloud.com/leskrapos" target="_blank" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
+                    <li class="list__item social__item"><a href="https://www.facebook.com/LesKrapos" target="_blank" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
+                    <li class="list__item social__item"><a href="https://www.youtube.com/@les-krapos" target="_blank" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
+                    <li class="list__item social__item"><a href="https://www.instagram.com/leskrapos" target="_blank" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
+                </ul>
+            </div>
+            <p class="footer__legal"><a href="mentions-legales.html" target="_blank" class="link">Mentions Légales</a></p>
         </footer>
     </body>
 </html>

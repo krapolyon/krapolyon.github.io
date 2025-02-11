@@ -106,13 +106,15 @@ var myCarousel = (function() {
     if (! hasClass(carousel, 'carousel')) {
       addClass(carousel, 'carousel');
     }
-    addClass(carousel, settings.class);
+    if (! hasClass(carousel, settings.class)) {
+      addClass(carousel, settings.class);
+    }
 
     // Create unordered list for controls, and attach click events to previous and next slide
     var ctrls = document.createElement('ul');
 
     ctrls.className = 'list carousel__controls';
-    ctrls.innerHTML = '<li class="list-item carousel__control-item">' +
+    ctrls.innerHTML = '<li class="list__item carousel__control-item">' +
         '<button type="button" class="btn carousel__btn carousel__btn--prev"></button>' +
       '</li>' +
       '<li>' +

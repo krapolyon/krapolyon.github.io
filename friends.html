@@ -10,40 +10,36 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap">
-        <link rel="stylesheet" href="reset.css" />
         <link rel="stylesheet" href="krapos.css" />
         <script src="nav-menu.js" defer></script>
     </head>
     <body class="body">
+        <a id="friends-anchor" class="section__anchor"></a>
         <!-- Header -->
         <header class="header">
             <img id="header-logo-img" class="header__logo" src="assets/images/common/LogoKrapo.svg" width="100px" heigh="100px" alt="Logo Krapo"/>
-            <nav id="main-nav" class="nav menu__nav" aria-label="Site menu">
-                <button id="btn-main-nav" class="btn btn--hamburger menu__nav-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav"></button>
-                <ul id="main-nav-list" class="list menu__list menu__list menu__list--hidden">
-                    <li class="list-item menu__list-item"><a href="index.html" class="link menu__link">Accueil</a></li>
-                    <li class="list-item menu__list-item"><a href="media.html" class="link menu__link">Médias</a></li>
-                    <li class="list-item menu__list-item"><a href="setlist.html" class="link menu__link">Répertoire</a></li>
-                    <li class="list-item menu__list-item"><a href="friends.html" class="link menu__link">Copains</a></li>
-                    <li class="list-item menu__list-item"><a href="contact.html" class="link menu__link">Contact</a></li>
+            <nav id="main-nav" class="menu header__menu" aria-label="Site menu">
+                <button id="btn-main-nav" class="btn btn--hamburger header__menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav"></button>
+                <ul id="main-nav-list" class="list menu__list menu__list--hidden">
+                    <li class="list__item menu__item"><a href="index.html" class="link menu__link">Accueil</a></li>
+                    <li class="list__item menu__item"><a href="media.html" class="link menu__link">Médias</a></li>
+                    <li class="list__item menu__item"><a href="setlist.html" class="link menu__link">Répertoire</a></li>
+                    <li class="list__item menu__item"><a href="friends.html" class="link menu__link">Copains</a></li>
+                    <li class="list__item menu__item"><a href="contact.html" class="link menu__link">Contact</a></li>
                 </ul>
             </nav>
-            <ul aria-label="Social networks menu" class="list header__list">
-                <li class="list-item"><a href="https://www.soundcloud.com/leskrapos" target="_blank" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
-                <li class="list-item"><a href="https://www.facebook.com/LesKrapos" target="_blank" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
-                <li class="list-item"><a href="https://www.youtube.com/@les-krapos" target="_blank" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
-                <li class="list-item"><a href="https://www.instagram.com/leskrapos" target="_blank" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
-            </ul>
+            <div class="social header__social" aria-label="Social networks menu">
+                <ul aria-label="Social networks menu" class="list social__list">
+                    <li class="list__item social__item"><a href="https://www.soundcloud.com/leskrapos" target="_blank" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
+                    <li class="list__item social__item"><a href="https://www.facebook.com/LesKrapos" target="_blank" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
+                    <li class="list__item social__item"><a href="https://www.youtube.com/@les-krapos" target="_blank" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
+                    <li class="list__item social__item"><a href="https://www.instagram.com/leskrapos" target="_blank" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
+                </ul>
+            </div>
         </header>
         <!-- Friends Page -->
         <div id="friends-page" class="page page--friends">
             <section id="friends-presentation" class="section page_section section--friends">
-                <div class="wrapper--friends-text">
-                    <h2 class="h2"><a id="friends-anchor" class="section__anchor"></a>Les copains</h2>
-                    <p class="text-block">Au fur et à mesure de nos pérégrinations on s'est fait des copains un peu partout en France, voire même un peu plus loin.</p>
-                    <p class="text-block">Comme on trouve qu'ils sont eux aussi vachement cool, on te propose d'aller voir leurs sites ouebs aussi.</p>
-                    <p class="text-block">On t'as oublié ? Laisse-nous un <a href="contact.html" class="link">message</a>, qu'on y remédie !</p>
-                </div>
                 <div class="wrapper--friends-map">
                     <figure class="figure">
                         <svg viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -68,261 +64,267 @@
                         </svg>
                     </figure>
                 </div>
+                <div class="wrapper--friends-text">
+                    <h2 class="h2">Les copains</h2>
+                    <p class="text text--long">Au fur et à mesure de nos pérégrinations on s'est fait des copains un peu partout en France, voire même un peu plus loin.</p>
+                    <p class="text text--long">Comme on trouve qu'ils sont eux aussi vachement cool, on te propose d'aller voir leurs sites ouebs aussi.</p>
+                    <p class="text text--long">On t'as oublié ? Laisse-nous un <a href="contact.html" class="link">message</a>, qu'on y remédie !</p>
+                </div>
                 <div class="wrapper--friends-regions">
                     <section class="section section--friends-region">
-                        <h3 class="h3 h3--compact"><a id="friends-region-ARA-anchor" class="section__anchor"></a>Auvergne-Rhône-Alpes<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
+                        <h3 class="h3"><a id="friends-region-ARA-anchor" class="section__anchor"></a>Auvergne-Rhône-Alpes<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
                         <ol class="list cards__list">
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/ARA/pustule.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">La Pustule</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">La fanfare qui décapsule</p>
+                                        <p class="card__copy quote">La fanfare qui décapsule</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Lyon</p>
+                                        <p class="card__copy">Lyon</p>
                                     </div>
                                     <a class="card__link" href="https://pustule.org" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/ARA/lgmx.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">LGMX</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare psychoactive électrostimulante</p>
+                                        <p class="card__copy quote">Fanfare psychoactive électrostimulante</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Lyon</p>
+                                        <p class="card__copy">Lyon</p>
                                     </div>
                                     <a class="card__link" href="https://www.lgmx.fr" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/ARA/ssb.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Super Smash Brass</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare jeux vidéos</p>
+                                        <p class="card__copy quote">Fanfare jeux vidéos</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Lyon</p>
+                                        <p class="card__copy">Lyon</p>
                                     </div>
                                     <a class="card__link" href="http://supersmashbrass.com" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/ARA/karlek.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Kärlek</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Reprises Black-Death-Thrash</p>
+                                        <p class="card__copy quote">Reprises Black-Death-Thrash</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Lyon</p>
+                                        <p class="card__copy">Lyon</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/fanfarekarlek/" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/ARA/fanfat.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">La Fanfat&#39;</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">La seule fanfare 100% matière grasse. Mais avec des paillettes.</p>
+                                        <p class="card__copy quote">La seule fanfare 100% matière grasse. Mais avec des paillettes.</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Lyon</p>
+                                        <p class="card__copy">Lyon</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/lafanfat/" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/ARA/over_ze_knup.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Over Ze Knup</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Classic &amp; Rock&#39;n&#39;Roll Quatuor sauce Punk&#39;Jazz</p>
+                                        <p class="card__copy quote">Classic &amp; Rock&#39;n&#39;Roll Quatuor sauce Punk&#39;Jazz</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Lyon</p>
+                                        <p class="card__copy">Lyon</p>
                                     </div>
                                     <a class="card__link" href="https://overzeuknup.top" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/ARA/fat_ducks.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Fat Ducks</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Jeune fanfare énergique aux rythmes de funk et d&#39;électro</p>
+                                        <p class="card__copy quote">Jeune fanfare énergique aux rythmes de funk et d&#39;électro</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Lyon</p>
+                                        <p class="card__copy">Lyon</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/profile.php?id=100076116732441" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/ARA/canal_chips.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Canal Chips</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare festive en Drôme-Ardèche</p>
+                                        <p class="card__copy quote">Fanfare festive en Drôme-Ardèche</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Valence</p>
+                                        <p class="card__copy">Valence</p>
                                     </div>
                                     <a class="card__link" href="https://canalchips.wixsite.com/chips" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/ARA/marcel_frontale.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Marcel Frontale</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare New Orleans</p>
+                                        <p class="card__copy quote">Fanfare New Orleans</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Lyon</p>
+                                        <p class="card__copy">Lyon</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/MarcelFrontale" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/ARA/velcros.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Velcro’s Brass Band</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Musique survitaminée</p>
+                                        <p class="card__copy quote">Musique survitaminée</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Lyon</p>
+                                        <p class="card__copy">Lyon</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/velcrosbrassband/" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/ARA/cacophonie.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">La Cacophonie</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare presqu&#39;écoutable</p>
+                                        <p class="card__copy quote">Fanfare presqu&#39;écoutable</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Lyon</p>
+                                        <p class="card__copy">Lyon</p>
                                     </div>
                                     <a class="card__link" href="http://www.fanfare-cacophonie.org" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/ARA/pink_it_black.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Pink It Black</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">La fanfare en rose et noir</p>
+                                        <p class="card__copy quote">La fanfare en rose et noir</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Grenoble</p>
+                                        <p class="card__copy">Grenoble</p>
                                     </div>
                                     <a class="card__link" href="https://pinkitblack.fr/" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/ARA/38_tonnes.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">38 tonnes</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Grenoble</p>
+                                        <p class="card__copy">Grenoble</p>
                                     </div>
                                     <a class="card__link" href="https://www.38tonnes.fr" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/ARA/mort_subite.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">La Mort Subite</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Grenoble</p>
+                                        <p class="card__copy">Grenoble</p>
                                     </div>
                                     <a class="card__link" href="https://bandlamortsubite.wixsite.com/band-lamortsubite" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/ARA/garces_emouchees.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Les garces embouchées</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Grenobles</p>
+                                        <p class="card__copy">Grenobles</p>
                                     </div>
                                     <a class="card__link" href="http://garcesembouchees.canalblog.com/" target="_blank"></a>
                                 </div>
@@ -331,21 +333,21 @@
                     </section>
                 <div class="wrapper--friends-regions">
                     <section class="section section--friends-region">
-                        <h3 class="h3 h3--compact"><a id="friends-region-BFC-anchor" class="section__anchor"></a>Bourgogne-Franche-Comté<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
+                        <h3 class="h3"><a id="friends-region-BFC-anchor" class="section__anchor"></a>Bourgogne-Franche-Comté<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
                         <ol class="list cards__list">
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/BFC/elan_brass_band.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Elan Brass Band</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Toucy</p>
+                                        <p class="card__copy">Toucy</p>
                                     </div>
                                     <a class="card__link" href="http://www.elanbrassband.org" target="_blank"></a>
                                 </div>
@@ -354,55 +356,55 @@
                     </section>
                 <div class="wrapper--friends-regions">
                     <section class="section section--friends-region">
-                        <h3 class="h3 h3--compact"><a id="friends-region-BRE-anchor" class="section__anchor"></a>Bretagne<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
+                        <h3 class="h3"><a id="friends-region-BRE-anchor" class="section__anchor"></a>Bretagne<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
                         <ol class="list cards__list">
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/BRE/banda_freux.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">La Banda Freux</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">La fanfare la plus à l&#39;ouest</p>
+                                        <p class="card__copy quote">La fanfare la plus à l&#39;ouest</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Brest</p>
+                                        <p class="card__copy">Brest</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/profile.php?id=100062927544086" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/BRE/a_bout_de_souffle.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">A Bout de Souffle</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Douarnenez</p>
+                                        <p class="card__copy">Douarnenez</p>
                                     </div>
                                     <a class="card__link" href="http://aboutdesouffle.free.fr" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/BRE/zebaliz.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Zebaliz</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Joyeuse fanfare</p>
+                                        <p class="card__copy quote">Joyeuse fanfare</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Brest</p>
+                                        <p class="card__copy">Brest</p>
                                     </div>
                                     <a class="card__link" href="http://fanfare-zebaliz.com/home.php3" target="_blank"></a>
                                 </div>
@@ -411,21 +413,21 @@
                     </section>
                 <div class="wrapper--friends-regions">
                     <section class="section section--friends-region">
-                        <h3 class="h3 h3--compact"><a id="friends-region-CVL-anchor" class="section__anchor"></a>Centre-Val de Loire<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
+                        <h3 class="h3"><a id="friends-region-CVL-anchor" class="section__anchor"></a>Centre-Val de Loire<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
                         <ol class="list cards__list">
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/CVL/la_vaginale.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">La Vaginale</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Tours</p>
+                                        <p class="card__copy">Tours</p>
                                     </div>
                                     <a class="card__link" href="https://sitelavaginale.wixsite.com/lavaginale" target="_blank"></a>
                                 </div>
@@ -434,21 +436,21 @@
                     </section>
                 <div class="wrapper--friends-regions">
                     <section class="section section--friends-region">
-                        <h3 class="h3 h3--compact"><a id="friends-region-GES-anchor" class="section__anchor"></a>Grand Est<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
+                        <h3 class="h3"><a id="friends-region-GES-anchor" class="section__anchor"></a>Grand Est<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
                         <ol class="list cards__list">
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/GES/feis.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">FEIS</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare des Externes et Internes de Strasbourg</p>
+                                        <p class="card__copy quote">Fanfare des Externes et Internes de Strasbourg</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Strasbourg</p>
+                                        <p class="card__copy">Strasbourg</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/Fanfare.FEIS/?locale=fr_FR" target="_blank"></a>
                                 </div>
@@ -457,38 +459,38 @@
                     </section>
                 <div class="wrapper--friends-regions">
                     <section class="section section--friends-region">
-                        <h3 class="h3 h3--compact"><a id="friends-region-HDF-anchor" class="section__anchor"></a>Hauts-de-France<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
+                        <h3 class="h3"><a id="friends-region-HDF-anchor" class="section__anchor"></a>Hauts-de-France<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
                         <ol class="list cards__list">
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/HDF/tractopelle.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Fanfare Tractopelle</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Groupe rétro-futuriste</p>
+                                        <p class="card__copy quote">Groupe rétro-futuriste</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Lille</p>
+                                        <p class="card__copy">Lille</p>
                                     </div>
                                     <a class="card__link" href="http://www.fanfaretractopelle.fr" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/HDF/brigade_des_tubes.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">La Brigade des Tubes</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Lille</p>
+                                        <p class="card__copy">Lille</p>
                                     </div>
                                     <a class="card__link" href="http://www.labrigadedestubes.com" target="_blank"></a>
                                 </div>
@@ -497,276 +499,276 @@
                     </section>
                 <div class="wrapper--friends-regions">
                     <section class="section section--friends-region">
-                        <h3 class="h3 h3--compact"><a id="friends-region-IDF-anchor" class="section__anchor"></a>Île-de-France<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
+                        <h3 class="h3"><a id="friends-region-IDF-anchor" class="section__anchor"></a>Île-de-France<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
                         <ol class="list cards__list">
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/3615.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">3615 Brass Band</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare bas débit</p>
+                                        <p class="card__copy quote">Fanfare bas débit</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="https://3615bb.com" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/rolland_merguez.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Rolland Merguez</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare cosmique</p>
+                                        <p class="card__copy quote">Fanfare cosmique</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="http://rollandmerguez.fr" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/dumb_and_brass.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Dumb and Brass</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare psycho-Caraïbes-Electro-Funk-Reggae</p>
+                                        <p class="card__copy quote">Fanfare psycho-Caraïbes-Electro-Funk-Reggae</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="http://www.dumbandbrass.com" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/mouette_et_charbons.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Mouette et Charbons</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="https://mouetteetcharbons.tumblr.com" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/lapins_superstars.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Les lapins superstars</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/leslapinsuperstars/" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/voiture_4.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">La voiture 4</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="http://voiture4.free.fr" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/supertromp.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">SuperTromp</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare Powwwerrrrr! et de qualité</p>
+                                        <p class="card__copy quote">Fanfare Powwwerrrrr! et de qualité</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/FanfareSupertromp/" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/les_zotres.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Les Zôtres</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare Indirigeable</p>
+                                        <p class="card__copy quote">Fanfare Indirigeable</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/leszotres.fanfare/?locale=fr_FR" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/bindy_nasty.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Bindy Nasty</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="https://bindinasty.wixsite.com/bindi" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/tabatakash.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Tabatakash</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="https://tabatakashfanfare.wixsite.com/tabatakash" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/godfingers.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Godfingers</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="https://www.godfingers.com" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/poilobrassband.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Poil O&#39;Brass Band</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare ébouriffante à la bonne humeur duveteuse</p>
+                                        <p class="card__copy quote">Fanfare ébouriffante à la bonne humeur duveteuse</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/Poilobrass/" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/gratkipoils.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Les Gratkipoils</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">La fanfare qui démange</p>
+                                        <p class="card__copy quote">La fanfare qui démange</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="http://gratkipoils.free.fr" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/monty_pistons.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Les Monty Pistons</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/fanfareMonty/" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/404_bonheur.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">404 Bonheur</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/404bonheur/" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/IDF/muses_tanguent.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Les muses tanguent</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Paris</p>
+                                        <p class="card__copy">Paris</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/profile.php?id=100063747243051" target="_blank"></a>
                                 </div>
@@ -775,106 +777,106 @@
                     </section>
                 <div class="wrapper--friends-regions">
                     <section class="section section--friends-region">
-                        <h3 class="h3 h3--compact"><a id="friends-region-NAQ-anchor" class="section__anchor"></a>Nouvelle-Aquitaine<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
+                        <h3 class="h3"><a id="friends-region-NAQ-anchor" class="section__anchor"></a>Nouvelle-Aquitaine<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
                         <ol class="list cards__list">
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/NAQ/la_grasse_bande.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">La Grasse Bande</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Bordeaux</p>
+                                        <p class="card__copy">Bordeaux</p>
                                     </div>
                                     <a class="card__link" href="https://lagrassebande.fr" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/NAQ/los_teoporos.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Los Teoporos</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Tzigani Funky !</p>
+                                        <p class="card__copy quote">Tzigani Funky !</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Bordeaux</p>
+                                        <p class="card__copy">Bordeaux</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/fanfarelosteoporos" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/NAQ/los_arsouillos.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Los Arsouillos</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Aire sur l&#39;Adour</p>
+                                        <p class="card__copy">Aire sur l&#39;Adour</p>
                                     </div>
                                     <a class="card__link" href="https://www.arsouillos.com" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/NAQ/le_beat_cheese.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Le Beat Cheese</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare affinée</p>
+                                        <p class="card__copy quote">Fanfare affinée</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Bordeaux</p>
+                                        <p class="card__copy">Bordeaux</p>
                                     </div>
                                     <a class="card__link" href="https://fanfarelebeatcheese.fr" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/NAQ/brigitte_bordo.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Brigitte Bordo</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Bordeaux</p>
+                                        <p class="card__copy">Bordeaux</p>
                                     </div>
                                     <a class="card__link" href="https://brigitte-bordo.com" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/NAQ/les_ptits_culs_ivres.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Les P&#39;tits Culs Ivres</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare de type brass band britannico-New-Orleans</p>
+                                        <p class="card__copy quote">Fanfare de type brass band britannico-New-Orleans</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Limoges</p>
+                                        <p class="card__copy">Limoges</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/LesPtitsCulsIvres" target="_blank"></a>
                                 </div>
@@ -883,38 +885,38 @@
                     </section>
                 <div class="wrapper--friends-regions">
                     <section class="section section--friends-region">
-                        <h3 class="h3 h3--compact"><a id="friends-region-NOR-anchor" class="section__anchor"></a>Normandie<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
+                        <h3 class="h3"><a id="friends-region-NOR-anchor" class="section__anchor"></a>Normandie<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
                         <ol class="list cards__list">
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/NOR/letoile_ciree.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">L&#39;Etoile Cirée</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Grandvill</p>
+                                        <p class="card__copy">Grandvill</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/fanfare.etoile.ciree" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/NOR/la_vashfol.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">La Vashfol</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Rouen</p>
+                                        <p class="card__copy">Rouen</p>
                                     </div>
                                     <a class="card__link" href="https://www.vashfol.fr" target="_blank"></a>
                                 </div>
@@ -923,140 +925,140 @@
                     </section>
                 <div class="wrapper--friends-regions">
                     <section class="section section--friends-region">
-                        <h3 class="h3 h3--compact"><a id="friends-region-OCC-anchor" class="section__anchor"></a>Occitanie<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
+                        <h3 class="h3"><a id="friends-region-OCC-anchor" class="section__anchor"></a>Occitanie<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
                         <ol class="list cards__list">
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/OCC/les_kadors.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Les Kadors</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">La fanfare des jusqu&#39;au-boutistes</p>
+                                        <p class="card__copy quote">La fanfare des jusqu&#39;au-boutistes</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Montpellier</p>
+                                        <p class="card__copy">Montpellier</p>
                                     </div>
                                     <a class="card__link" href="http://www.fanfaredeskadors.com" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/OCC/lady_jaja.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Lady Jaja</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare féminine et oenophile</p>
+                                        <p class="card__copy quote">Fanfare féminine et oenophile</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Nîmes</p>
+                                        <p class="card__copy">Nîmes</p>
                                     </div>
                                     <a class="card__link" href="https://fanfareladyjaja.wordpress.com" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/OCC/les_judas.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Les judas</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare iconoblaste</p>
+                                        <p class="card__copy quote">Fanfare iconoblaste</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Aimargues</p>
+                                        <p class="card__copy">Aimargues</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/LesJudas" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/OCC/les_peillasses.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Les Peillasses</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Nîmes</p>
+                                        <p class="card__copy">Nîmes</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/fanfare.lespeillasses/?locale=fr_FR" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/OCC/attila.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Attila et Huns II, III, IV</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">St Etienne d&#39;Escattes</p>
+                                        <p class="card__copy">St Etienne d&#39;Escattes</p>
                                     </div>
                                     <a class="card__link" href="https://fanfareattila.wixsite.com/home" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/OCC/les_trous_balours.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Les Trous Balourds</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare ambidextre Polymorphe</p>
+                                        <p class="card__copy quote">Fanfare ambidextre Polymorphe</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Toulouse</p>
+                                        <p class="card__copy">Toulouse</p>
                                     </div>
                                     <a class="card__link" href="https://collectif-fanfarnaum.fr/trous-balourds/" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/OCC/coco_fanfare_club.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Coco Fanfare Club</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare tout terrain</p>
+                                        <p class="card__copy quote">Fanfare tout terrain</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Montpellier</p>
+                                        <p class="card__copy">Montpellier</p>
                                     </div>
                                     <a class="card__link" href="https://cocofanfareclub.fr" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/OCC/mecanique_des_cuivres.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">La mécanique des Cuivres</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Toulouse</p>
+                                        <p class="card__copy">Toulouse</p>
                                     </div>
                                     <a class="card__link" href="https://collectif-fanfarnaum.fr/la-mecanique-des-cuivres/" target="_blank"></a>
                                 </div>
@@ -1065,55 +1067,55 @@
                     </section>
                 <div class="wrapper--friends-regions">
                     <section class="section section--friends-region">
-                        <h3 class="h3 h3--compact"><a id="friends-region-PAC-anchor" class="section__anchor"></a>Provence-Alpes-Côte d&#39;Azur<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
+                        <h3 class="h3"><a id="friends-region-PAC-anchor" class="section__anchor"></a>Provence-Alpes-Côte d&#39;Azur<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
                         <ol class="list cards__list">
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/PAC/ppc.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Le Pompier Poney Club</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare hyperactive</p>
+                                        <p class="card__copy quote">Fanfare hyperactive</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Marseille</p>
+                                        <p class="card__copy">Marseille</p>
                                     </div>
                                     <a class="card__link" href="https://www.lepompierponeyclub.com" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/PAC/mamie_vortex.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Mamie Vortex</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">La fanfare riche en Oméga Teuf !</p>
+                                        <p class="card__copy quote">La fanfare riche en Oméga Teuf !</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Marseille</p>
+                                        <p class="card__copy">Marseille</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/mamievortex/" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/PAC/mudanza.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Mudanza</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">La fanfare qui déménage</p>
+                                        <p class="card__copy quote">La fanfare qui déménage</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Salon de provence</p>
+                                        <p class="card__copy">Salon de provence</p>
                                     </div>
                                     <a class="card__link" href="https://mudanza.fr" target="_blank"></a>
                                 </div>
@@ -1122,72 +1124,72 @@
                     </section>
                 <div class="wrapper--friends-regions">
                     <section class="section section--friends-region">
-                        <h3 class="h3 h3--compact"><a id="friends-region-PDL-anchor" class="section__anchor"></a>Pays de la Loire<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
+                        <h3 class="h3"><a id="friends-region-PDL-anchor" class="section__anchor"></a>Pays de la Loire<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
                         <ol class="list cards__list">
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/PDL/trompettes_de_falloppe.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Les Trompettes de Fallope</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">La fanfare qui prend soin de vous</p>
+                                        <p class="card__copy quote">La fanfare qui prend soin de vous</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Nantes</p>
+                                        <p class="card__copy">Nantes</p>
                                     </div>
                                     <a class="card__link" href="https://trompettesdefallope.com" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/PDL/terminus.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Terminus Brass Band</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Nantes</p>
+                                        <p class="card__copy">Nantes</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/terminusbrassband/" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/PDL/roller_toaster.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Les Roller Toaster</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare du futur</p>
+                                        <p class="card__copy quote">Fanfare du futur</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Nantes</p>
+                                        <p class="card__copy">Nantes</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/FanfareRollerToaster/" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/PDL/westcostars.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Les WestCostars</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Fanfare Bam bam</p>
+                                        <p class="card__copy quote">Fanfare Bam bam</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Nantes</p>
+                                        <p class="card__copy">Nantes</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/WestCostars/" target="_blank"></a>
                                 </div>
@@ -1196,55 +1198,55 @@
                     </section>
                 <div class="wrapper--friends-regions">
                     <section class="section section--friends-region">
-                        <h3 class="h3 h3--compact"><a id="friends-region-WLD-anchor" class="section__anchor"></a>Ailleurs dans le monde ...<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
+                        <h3 class="h3"><a id="friends-region-WLD-anchor" class="section__anchor"></a>Ailleurs dans le monde ...<a href="#friends-anchor" class="btn btn--primary btn--up" title="Retour aux copains"></a></h3>
                         <ol class="list cards__list">
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/WLD/mefisto.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Mefisto Brass</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">Live techno brass attitude</p>
+                                        <p class="card__copy quote">Live techno brass attitude</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Milan, Italie</p>
+                                        <p class="card__copy">Milan, Italie</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/mefistobrass/" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/WLD/dirty_athens.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Dirty Athens Brass Band</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote"></p>
+                                        <p class="card__copy quote"></p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Athènes, Gèce</p>
+                                        <p class="card__copy">Athènes, Gèce</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/dirtyathensbrassband" target="_blank"></a>
                                 </div>
                             </li>
-                            <li class="list-item">
+                            <li class="list__item">
                                 <div class="card card--type-3">
                                     <div class="card__media card__media--type-3">
                                         <img class="img card__img" width="200px" height="200px" src="assets/images/friends/WLD/busc.png"/>
                                     </div>
-                                    <div class="card_header card__header--type-3">
+                                    <div class="card__header card__header--type-3">
                                         <p class="card__title">Brass United Social Club</p>
                                     </div>
                                     <div class="card__body card__body--type-3">
-                                        <p class="card_copy quote">The funk-led brassy supergroup you never knew you needed</p>
+                                        <p class="card__copy quote">The funk-led brassy supergroup you never knew you needed</p>
                                     </div>
                                     <div class="card__footer card__footer--type-3">
-                                        <p class="card_copy">Londres, Angleterre</p>
+                                        <p class="card__copy">Londres, Angleterre</p>
                                     </div>
                                     <a class="card__link" href="https://www.facebook.com/BrassUnitedSC/" target="_blank"></a>
                                 </div>
@@ -1256,12 +1258,15 @@
         </div>
         <!-- Footer -->
         <footer class="footer">
-            <ul aria-label="Social networks menu" class="list footer__list">
-                <li class="list-item"><a href="https://www.soundcloud.com/leskrapos" target="_blank" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
-                <li class="list-item"><a href="https://www.facebook.com/LesKrapos" target="_blank" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
-                <li class="list-item"><a href="https://www.youtube.com/@les-krapos" target="_blank" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
-                <li class="list-item"><a href="https://www.instagram.com/leskrapos" target="_blank" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
-            </ul>
+            <div class="social footer__social" aria-label="Social networks menu">
+                <ul aria-label="Social networks menu" class="list social__list">
+                    <li class="list__item social__item"><a href="https://www.soundcloud.com/leskrapos" target="_blank" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
+                    <li class="list__item social__item"><a href="https://www.facebook.com/LesKrapos" target="_blank" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
+                    <li class="list__item social__item"><a href="https://www.youtube.com/@les-krapos" target="_blank" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
+                    <li class="list__item social__item"><a href="https://www.instagram.com/leskrapos" target="_blank" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
+                </ul>
+            </div>
+            <p class="footer__legal"><a href="mentions-legales.html" target="_blank" class="link">Mentions Légales</a></p>
         </footer>
     </body>
 </html>

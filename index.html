@@ -10,7 +10,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap">
-        <link rel="stylesheet" href="reset.css" />
         <link rel="stylesheet" href="krapos.css" />
         <script src="nav-menu.js" defer></script>
     </head>
@@ -18,58 +17,62 @@
         <!-- Header -->
         <header class="header">
             <img id="header-logo-img" class="header__logo" src="assets/images/common/LogoKrapo.svg" width="100px" heigh="100px" alt="Logo Krapo"/>
-            <nav id="main-nav" class="nav menu__nav" aria-label="Site menu">
-                <button id="btn-main-nav" class="btn btn--hamburger menu__nav-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav"></button>
-                <ul id="main-nav-list" class="list menu__list menu__list menu__list--hidden">
-                    <li class="list-item menu__list-item"><a href="index.html" class="link menu__link">Accueil</a></li>
-                    <li class="list-item menu__list-item"><a href="media.html" class="link menu__link">Médias</a></li>
-                    <li class="list-item menu__list-item"><a href="setlist.html" class="link menu__link">Répertoire</a></li>
-                    <li class="list-item menu__list-item"><a href="friends.html" class="link menu__link">Copains</a></li>
-                    <li class="list-item menu__list-item"><a href="contact.html" class="link menu__link">Contact</a></li>
+            <nav id="main-nav" class="menu header__menu" aria-label="Site menu">
+                <button id="btn-main-nav" class="btn btn--hamburger header__menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav"></button>
+                <ul id="main-nav-list" class="list menu__list menu__list--hidden">
+                    <li class="list__item menu__item"><a href="index.html" class="link menu__link">Accueil</a></li>
+                    <li class="list__item menu__item"><a href="media.html" class="link menu__link">Médias</a></li>
+                    <li class="list__item menu__item"><a href="setlist.html" class="link menu__link">Répertoire</a></li>
+                    <li class="list__item menu__item"><a href="friends.html" class="link menu__link">Copains</a></li>
+                    <li class="list__item menu__item"><a href="contact.html" class="link menu__link">Contact</a></li>
                 </ul>
             </nav>
-            <ul aria-label="Social networks menu" class="list header__list">
-                <li class="list-item"><a href="https://www.soundcloud.com/leskrapos" target="_blank" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
-                <li class="list-item"><a href="https://www.facebook.com/LesKrapos" target="_blank" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
-                <li class="list-item"><a href="https://www.youtube.com/@les-krapos" target="_blank" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
-                <li class="list-item"><a href="https://www.instagram.com/leskrapos" target="_blank" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
-            </ul>
+            <div class="social header__social" aria-label="Social networks menu">
+                <ul aria-label="Social networks menu" class="list social__list">
+                    <li class="list__item social__item"><a href="https://www.soundcloud.com/leskrapos" target="_blank" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
+                    <li class="list__item social__item"><a href="https://www.facebook.com/LesKrapos" target="_blank" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
+                    <li class="list__item social__item"><a href="https://www.youtube.com/@les-krapos" target="_blank" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
+                    <li class="list__item social__item"><a href="https://www.instagram.com/leskrapos" target="_blank" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
+                </ul>
+            </div>
         </header>
         <!-- Home Page -->
         <div id="home-page" class="page page--home">
-            <div class="wrapper--home-img">
+            <div class="wrapper wrapper--home-img">
                 <div class="blob blob--home">
                     <img class="img img--rounded blob__img" src="assets/images/home/photo_home.jpg" alt="Abel et Nicard passent un soubassophone au-dessus d'une rivière. Crédit Photo : Les Krapos."/>
                 </div>
             </div>
-            <div class="wrapper--home-presentation">
+            <div class="wrapper wrapper--home-presentation">
                 <section id="home-presentation" class="section page__section">
                     <div id="home-presentation-heading" class="page__heading">
                         <h1 class="h1 heading__title">Les Krapos</h1>
-                        <a href="media.html" id="listen-button-home" class="btn btn--primary btn--media" aria-label="Ecouter les Krapos"></a>
+                        <a href="media.html" id="listen-button-home" class="btn btn--primary btn--media heading__button" aria-label="Ecouter les Krapos"></a>
                         <p class="tagline heading__subtitle">Fanfare amphibienne bondissante</p>
                     </div>
-                    <p class="text-block">Si la fanfare est née en <b class="strong">1995</b> sur les bancs de la faculté de médecine de <b class="strong">Lyon</b>, les fanfarons des <b class="strong">Krapos</b> viennent aujourd'hui d'horizons différents.</p>
-                    <p class="text-block">Cette joyeuse bande de batraciens se balade donc toujours accompagnée de trompettes, saxophones, trombones, euphoniums, soubas et batterie, pour faire travailler en rythme et en musique les cuisses musclées et dessinées de son croâssant fan club!</p>
-                    <p class="text-block">Énergie déblatérante, joyeuseté envahissante, rires déplacés et souffle vigoureux se mêlent tant et si bien que, comme on dit, hein, ça expédie du pesant!</p>
+                    <p class="text text--long">Si la fanfare est née en <b class="strong">1995</b> sur les bancs de la faculté de médecine de <b class="strong">Lyon</b>, les fanfarons des <b class="strong">Krapos</b> viennent aujourd'hui d'horizons différents.</p>
+                    <p class="text text--long">Cette joyeuse bande de batraciens se balade donc toujours accompagnée de trompettes, saxophones, trombones, euphoniums, soubas et batterie, pour faire travailler en rythme et en musique les cuisses musclées et dessinées de son croâssant fan club!</p>
+                    <p class="text text--long">Énergie déblatérante, joyeuseté envahissante, rires déplacés et souffle vigoureux se mêlent tant et si bien que, comme on dit, hein, ça expédie du pesant!</p>
                 </section>
             </div>
             <div class="wrapper--home-booking">
-                <section id="home-booking" class="section page__section wrapper--home-booking">
+                <section id="home-booking" class="section page__section">
                     <h2 class="h2 h2--with-lines">Chez vous ?</h2>
-                    <p class="text-block">Vous souhaitez booster l'ambiance de votre événement ou de votre établissement avec la musique énergisante des Krapos? Dites-nous tout!</p>
-                    <a href="booking.html" class="link btn btn__link btn--secondary btn--with-text btn--send">Demande de devis</a>
+                    <p class="text text--long">Vous souhaitez booster l'ambiance de votre événement ou de votre établissement avec la musique énergisante des Krapos? Dites-nous tout!</p>
+                    <a href="booking.html" class="btn btn--secondary btn--with-text btn--send btn--below-text">Demande de devis</a>
                 </section>
             </div>
         </div>
         <!-- Footer -->
         <footer class="footer">
-            <ul aria-label="Social networks menu" class="list footer__list">
-                <li class="list-item"><a href="https://www.soundcloud.com/leskrapos" target="_blank" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
-                <li class="list-item"><a href="https://www.facebook.com/LesKrapos" target="_blank" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
-                <li class="list-item"><a href="https://www.youtube.com/@les-krapos" target="_blank" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
-                <li class="list-item"><a href="https://www.instagram.com/leskrapos" target="_blank" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
-            </ul>
+            <div class="social footer__social" aria-label="Social networks menu">
+                <ul aria-label="Social networks menu" class="list social__list">
+                    <li class="list__item social__item"><a href="https://www.soundcloud.com/leskrapos" target="_blank" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
+                    <li class="list__item social__item"><a href="https://www.facebook.com/LesKrapos" target="_blank" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
+                    <li class="list__item social__item"><a href="https://www.youtube.com/@les-krapos" target="_blank" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
+                    <li class="list__item social__item"><a href="https://www.instagram.com/leskrapos" target="_blank" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
+                </ul>
+            </div>
             <p class="footer__legal"><a href="mentions-legales.html" target="_blank" class="link">Mentions Légales</a></p>
         </footer>
     </body>
