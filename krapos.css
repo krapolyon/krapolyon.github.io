@@ -1128,6 +1128,12 @@ html {
     background-position: center;
 }
 
+@media screen and (min-width: 768px) and (min-aspect-ratio: 1/1) {
+    .carousel__btn {
+        display: none;
+    }
+}
+
 .carousel__btn--prev {
     left: 0;
     background-image: url("assets/images/common/pictos/chevron-left.svg");
