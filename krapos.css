@@ -1952,21 +1952,34 @@ html {
 
 /* SVG styling */
 
-svg|path#France {
-    stroke : none; 
-    stroke-width: 1; 
+.section__anchor--region {
+    position: relative;
+    top: -2.5rem;
+}
+
+@media screen and (min-width: 768px) and (min-aspect-ratio: 1/1) {
+    .section__anchor--region {
+        position: relative;
+        top: -3.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) and (min-aspect-ratio: 1/1) {
+    .section__anchor--region {
+        position: relative;
+        top: -4rem;
+    }
+}
+
+svg|g.country {
+    stroke : white; 
+    stroke-width: 3; 
     fill-rule: evenodd;
     fill: url(#linearGradient-1);
 }
 
-svg|path#ARA{
-  stroke: #FFFFFF;
-  stroke-width: 2;
-  fill: #F4AD2A;
-  opacity: 1;
-}
+svg|path:hover { 
+    fill: #F5AE2D;
 
-svg|path#ARA:hover {
-    opacity: 1;
 }
 
