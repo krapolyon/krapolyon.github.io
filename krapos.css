@@ -208,7 +208,7 @@ html {
 
 @media screen and (min-width: 768px) and (min-aspect-ratio: 1/1) {
     .h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -637,7 +637,7 @@ html {
     left: calc(var(--btn-media-radius) - 0.433 * var(--btn-media-arrow-size) + 0.1 * var(--btn-media-radius)); 
 }
 
-@media screen and (min-width: 768px) and (min-aspect-ratio: 1/1) {
+@media screen and (min-width: 1024px) and (min-aspect-ratio: 1/1) {
     .btn--media {
         font-size: 1rem;
         width: 9rem;
@@ -1686,7 +1686,7 @@ html {
 	margin-bottom: 2em;
 
 	display: grid;
-    grid-template-columns: 1fr 4em; /* make sure 2nd column is wide enough for any items to fit */
+    grid-template-columns: 1fr 2em; /* make sure 2nd column is wide enough for any items to fit */
     grid-row-gap: 0.46em;
     align-items: center;
 
