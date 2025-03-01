@@ -206,6 +206,10 @@ html {
     margin-bottom: 1em;
 }
 
+.text + .h2 {
+    margin-top: 1em;
+}
+
 @media screen and (min-width: 768px) and (min-aspect-ratio: 1/1) {
     .h2 {
         font-size: 1.6rem;
@@ -672,7 +676,7 @@ html {
     height: 2em;
     background-repeat: no-repeat ;
     background-position: center;
-    padding-left: 1em;
+    padding-left: 1.25em;
     padding-right: 1em;
 }
 
@@ -695,7 +699,7 @@ html {
 
 /* |||| View button - youtube icon before text in rounded rectangular shape */
 .btn--view::before {
-    background-image: url("assets/images/common/social/youtube.svg");
+    background-image: url("assets/images/common/social/youtube-light.svg");
 }
 
 
@@ -777,7 +781,8 @@ html {
 /* https://webkit.org/blog/13096/css-has-pseudo-class/ */
 .card:has(.card__link:is(:hover, :active)) {
     background: var(--link-color);
-    border-radius: 2em;
+    border-radius: 1rem;
+    padding: 0.75rem;
 }
 
 .card__img {
@@ -1540,7 +1545,7 @@ html {
     .page--media {
         display: grid;
         grid-template-columns: auto 37.5% auto 50% auto;
-        column-gap: 0;
+        column-gap: 3rem;
 
     }
 
@@ -1760,21 +1765,21 @@ html {
 }
 
 .blob--audio {
-    background-size: 13rem auto;
+    background-size: 11rem auto;
     background-image: url("assets/images/medias/blob_media_1.svg");
     background-position: 100% 100%;
     margin-bottom: 2rem;
 }
 
 .blob--video {
-    background-size: 13rem auto;
+    background-size: 11rem auto;
     background-image: url("assets/images/medias/blob_media_2.svg");
     background-position: 100% 100%;
     margin-bottom: 2rem;
 }
 
 .blob--setlist {
-    background-size: 12rem auto;
+    background-size: 11rem auto;
     background-image: url("assets/images/setlist/blob_setlist.svg");
     background-position: 0% 100%;
     margin-bottom: 2rem;
@@ -1981,7 +1986,12 @@ svg|g.country {
 }
 
 svg|path:hover { 
-    fill: #F5AE2D;
+    fill: url(#linearGradient-2);
 
+/*
+    --primary-color: #111c28;
+    --secondary-color: #F4AD2A;
+    --tertiary-color: #F5F1E3;
+*/
 }
 

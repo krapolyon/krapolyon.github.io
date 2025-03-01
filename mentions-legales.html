@@ -4,87 +4,90 @@
         <meta charset="utf-8"/>
         <meta name="description" content="Page introuvable. Tu t’es noyé dans la mare..."/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Erreur 404 - Les Krapos - Fanfare amphibienne</title>
-        
+        <title>Mentions Légales - Les Krapos - Fanfare amphibienne</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap">
-        <link rel="stylesheet" href="reset.css" />
         <link rel="stylesheet" href="krapos.css" />
         <script src="nav-menu.js" defer></script>
     </head>
     <body class="body">
         <!-- Header -->
         <header class="header">
-            <img id="header-logo-img" class="header__logo" src="assets/images/common/LogoKrapo.svg" width="100px" heigh="100px" alt="Logo Krapo"/>
-            <nav id="main-nav" class="nav menu__nav" aria-label="Site menu">
-                <button id="btn-main-nav" class="btn btn--hamburger menu__nav-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav"></button>
-                <ul id="main-nav-list" class="list menu__list menu__list menu__list--hidden">
-                    <li class="list-item menu__list-item"><a href="index.html" class="link menu__link">Accueil</a></li>
-                    <li class="list-item menu__list-item"><a href="media.html" class="link menu__link">Médias</a></li>
-                    <li class="list-item menu__list-item"><a href="setlist.html" class="link menu__link">Répertoire</a></li>
-                    <li class="list-item menu__list-item"><a href="friends.html" class="link menu__link">Copains</a></li>
-                    <li class="list-item menu__list-item"><a href="contact.html" class="link menu__link">Contact</a></li>
+            <a href="index.html" class="link"><img id="header-logo-img" class="header__logo" src="assets/images/common/LogoKrapo.svg" width="100px" heigh="100px" alt="Logo Krapo"/></a>
+            <nav id="main-nav" class="menu header__menu" aria-label="Site menu">
+                <button id="btn-main-nav" class="btn btn--hamburger header__menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav"></button>
+                <ul id="main-nav-list" class="list menu__list menu__list--hidden">
+                    <li class="list__item menu__item"><a href="index.html" class="link menu__link">Accueil</a></li>
+                    <li class="list__item menu__item"><a href="media.html" class="link menu__link">Médias</a></li>
+                    <li class="list__item menu__item"><a href="setlist.html" class="link menu__link">Répertoire</a></li>
+                    <li class="list__item menu__item"><a href="friends.html" class="link menu__link">Copains</a></li>
+                    <li class="list__item menu__item"><a href="contact.html" class="link menu__link">Contact</a></li>
                 </ul>
             </nav>
-            <ul aria-label="Social networks menu" class="list header__list">
-                <li class="list-item"><a href="https://www.soundcloud.com/leskrapos" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
-                <li class="list-item"><a href="https://www.facebook.com/LesKrapos" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
-                <li class="list-item"><a href="https://www.youtube.com/@les-krapos" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
-                <li class="list-item"><a href="https://www.instagram.com/leskrapos" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
-            </ul>
+            <div class="social header__social" aria-label="Social networks menu">
+                <ul aria-label="Social networks menu" class="list social__list">
+                    <li class="list__item social__item"><a href="https://www.soundcloud.com/leskrapos" target="_blank" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
+                    <li class="list__item social__item"><a href="https://www.facebook.com/LesKrapos" target="_blank" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
+                    <li class="list__item social__item"><a href="https://www.youtube.com/@les-krapos" target="_blank" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
+                    <li class="list__item social__item"><a href="https://www.instagram.com/leskrapos" target="_blank" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
+                </ul>
+            </div>
         </header>
-        <!-- 404 Page -->
+        <!-- Legal Page -->
         <div id="mentions-legales-page" class="page">
             <section id="mentions-legales-presentation" class="section page_section page_section--center">
                 <h1 class="h1">Mentions légales</h1>
                     <h2 class="h2">Informations éditoriales</h2>
                         <h3 class="h3">Éditeur</h3>
-                            <p>Ce site et son contenu est édité par l’association « Les Crapauds Saint-Jacques », plus connus sous le nom « Les Krapos ».</p>
-                            <p>Le siège des Krapos est situé au domicile du président ou de la présidente de l’association. Pour des raisons de confidentialité, cette adresse n’est pas communiquée sur le site web, mais est déclarée en préfecture.</p>
-                            <p>Les Krapos peuvent être joints via le formulaire de contact du site ou leurs réseaux sociaux.</p>
+                            <p class="text text--long">Ce site et son contenu est édité par l’association « Les Crapauds Saint-Jacques », plus connus sous le nom « Les Krapos ».</p>
+                            <p class="text text--long">Le siège des Krapos est situé au domicile du président ou de la présidente de l’association. Pour des raisons de confidentialité, cette adresse n’est pas communiquée sur le site web, mais est déclarée en préfecture.</p>
+                            <p class="text text--long">Les Krapos peuvent être joints via le formulaire de contact du site ou leurs réseaux sociaux.</p>
                         <h3 class="h3">Direction de publication</h3>
-                            <p>Josselin GRANGER, membre des Krapos, en collaboration avec l’équipe de communication de l’association.</p>
+                            <p class="text text--long">Josselin GRANGER, membre des Krapos, en collaboration avec l’équipe de communication de l’association.</p>
                     <h2 class="h2">Protection des données personnelles</h2>
                         <h3 class="h3">Respect des lois en vigueur</h3>
-                            <p>Le site des Krapos se conforme au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatiques et Libertés.</p>
+                            <p class="text text--long">Le site des Krapos se conforme au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatiques et Libertés.</p>
                         <h3 class="h3">Données collectées et traitement</h3>
-                            <p>Les Krapos collectent via les formulaires de ce site les informations suivantes : </p>
+                            <p class="text text--long">Les Krapos collectent via les formulaires de ce site les informations suivantes : </p>
                             <ul class="list bullet__list">
                                 <li>Nom Prénom</li>
                                 <li>Email</li>
                                 <li>Numéro de téléphone</li>
                             </ul>
-                            <p>Ces informations sont conservées dans la boîte e-mail principale des Krapos (Gmail) pour des besoins de contact et organisation et pour archivage., et ne sont pas conservées sur d’autres serveurs.</p>
-                            <p>Elles ne sont en aucun cas transmises à des tierces parties.</p>
-                            <p>Ces informations peuvent être supprimées sur simple demandes à <a href="mailto:dpo@leskrapos.com">dpo@leskrapos.com</a>. Aucune information n’est collectée à votre insu.</p>
+                            <p class="text text--long">Ces informations sont conservées dans la boîte e-mail principale des Krapos (Gmail) pour des besoins de contact et organisation et pour archivage., et ne sont pas conservées sur d’autres serveurs.</p>
+                            <p class="text text--long">Elles ne sont en aucun cas transmises à des tierces parties.</p>
+                            <p class="text text--long">Ces informations peuvent être supprimées sur simple demandes à <a href="mailto:dpo@leskrapos.com">dpo@leskrapos.com</a>. Aucune information n’est collectée à votre insu.</p>
                         <h3 class="h3">Cookies</h3>
-                            <p>Ce site ne dépose pas de cookie sur votre ordinateur.</p>
+                            <p class="text text--long">Ce site ne dépose pas de cookie sur votre ordinateur.</p>
 
                     <h2 class="h2">Hébergeur</h2>
-                        <p>L’hébergeur du site est la société HOSTINGER INTERNATIONAL LTD, dont le siège social se situe 61 Lordou Vironos Street, 6023 Larnaca, Chypre, joignable par le moyen suivant : <a href="https://www.hostinger.fr/contact">https://www.hostinger.fr/contact</a></p>
+                        <p class="text text--long">L’hébergeur du site est la société HOSTINGER INTERNATIONAL LTD, dont le siège social se situe 61 Lordou Vironos Street, 6023 Larnaca, Chypre, joignable par le moyen suivant : <a href="https://www.hostinger.fr/contact">https://www.hostinger.fr/contact</a></p>
                     <h2 class="h2">Droits d’auteur et de reproduction</h2>
-                        <p>Sauf mention contraire, tous les éléments accessibles sur le site (textes, images, graphismes, logo, icônes, sons, logiciels, etc.) restent la propriété exclusive de leurs auteurs, en ce qui concerne les droits de propriété intellectuelle ou les droits d’usage.</p>
-                        <p>Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de l’auteur.</p>
-                        <p>Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il contient est considérée comme constitutive d’une contrefaçon et passible de poursuites.</p>
+                        <p class="text text--long">Sauf mention contraire, tous les éléments accessibles sur le site (textes, images, graphismes, logo, icônes, sons, logiciels, etc.) restent la propriété exclusive de leurs auteurs, en ce qui concerne les droits de propriété intellectuelle ou les droits d’usage.</p>
+                        <p class="text text--long">Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de l’auteur.</p>
+                        <p class="text text--long">Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il contient est considérée comme constitutive d’une contrefaçon et passible de poursuites.</p>
                     <h2 class="h2">Crédits photos</h2>
-                        <p>Les photos présentées sur ce site sont la propriété exclusives des personnes physiques ou morales suivantes :</p>
-                        <ul class="list bullet__list">
-                            <li>Les Krapos</li>
-                            <li>Stan Bonnet</li>
-                            <li>Gilles Reboisson</li>
+                        <p class="text text--long">Les photos présentées sur ce site sont la propriété exclusives des personnes physiques ou morales suivantes :</p>
+                        <ul class="list list--bullet">
+                            <li class="list__item">Les Krapos</li>
+                            <li class="list__item">Stan Bonnet</li>
+                            <li class="list__item">Gilles Reboisson</li>
                         </ul>
             </section>
         </div>
         <!-- Footer -->
         <footer class="footer">
-            <ul aria-label="Social networks menu" class="list footer__list">
-                <li class="list-item"><a href="https://www.soundcloud.com/leskrapos" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
-                <li class="list-item"><a href="https://www.facebook.com/LesKrapos" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
-                <li class="list-item"><a href="https://www.youtube.com/@les-krapos" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
-                <li class="list-item"><a href="https://www.instagram.com/leskrapos" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
-            </ul>
+            <div class="social footer__social" aria-label="Social networks menu">
+                <ul aria-label="Social networks menu" class="list social__list">
+                    <li class="list__item social__item"><a href="https://www.soundcloud.com/leskrapos" target="_blank" class="btn btn--social btn--soundcloud" aria-label="&Eacutecouter les Krapos sur Soundcloud"></a></li>
+                    <li class="list__item social__item"><a href="https://www.facebook.com/LesKrapos" target="_blank" class="btn btn--social btn--facebook" aria-label="Suivre les Krapos sur Facebook"></a></li>
+                    <li class="list__item social__item"><a href="https://www.youtube.com/@les-krapos" target="_blank" class="btn btn--social btn--youtube" aria-label="Regarder les Krapos sur Youtube"></a></li>
+                    <li class="list__item social__item"><a href="https://www.instagram.com/leskrapos" target="_blank" class="btn btn--social btn--instagram" aria-label="Suivre les Krapos sur Instagram"></a></li>
+                </ul>
+            </div>
+            <p class="footer__legal"><a href="mentions-legales.html" target="_blank" class="link">Mentions Légales</a></p>
         </footer>
     </body>
 </html>
