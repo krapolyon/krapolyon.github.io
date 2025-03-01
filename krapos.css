@@ -646,6 +646,8 @@ html {
     .btn--media::after {
         content: "Écouter";
         margin: auto 1rem auto 3.5rem;
+        font-size: 1.1rem;
+        font-weight: bolder;
     }
 }
 
