@@ -1960,8 +1960,10 @@ html {
 /* SVG styling */
 
 .section__anchor--region {
+    height: 1rem;
     position: relative;
     top: -2.5rem;
+    z-index: -1;
 }
 
 @media screen and (min-width: 768px) and (min-aspect-ratio: 1/1) {
