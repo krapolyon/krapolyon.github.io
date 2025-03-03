@@ -51,28 +51,43 @@
                 </section>
             </div>
             <div class="wrapper--contact-form">
-                <form id="booking-form" class="form">
-                        <label class="form__label" for="booking-name">* Votre nom / Le nom de votre organisme</label>
-                        <input class="form__input" type="text" id="booking-name" name="user_name" required />
-                        <label class="form__label" for="booking-mail">* Votre e-mail</label>
-                        <input class="form__input" type="email" id="booking-mail" name="user_email" required />
-                        <label class="form__label" for="booking-phone">* Un numéro de téléphone où on peut vous joindre</label>
-                        <input class="form__input" type="tel" id="booking-phone" name="user_phone" required />
-                        <label class="form__label" for="booking-msg">* Détaillez-nous votre projet<br>
-                            <ul>
-                                <li>Date</li> 
-                                <li>Temps de jeu, conditions</li>
-                                <li>Budget</li>
-                                <li>Défraiement</li>
-                                <li>Conditions d'accueil (repas, boisson, logement)</li>                    
-                            </ul>
-                        </label>
-                        <textarea class="form__textarea" id="booking-msg" name="user_message" required ></textarea>
-                        <input class="form__input" type="checkbox" name="user_consent" value="false" required />
-                        <label class="form__label form__label--checkbox" >Je suis d'accord pour vous filer mes données perso vu que vous n'en ferez pas n'importe quoi.</label>
-                        <button class="btn form__btn btn--primary btn--with-text btn--send btn--below-text" id="booking-submit-button">Envoyer</button>
+                <form id="contact-form" class="form" action="sendmail.php" method="post">
+                    <input type="hidden" id="form-type" name="form_type"  value="booking">
+                    <label class="form__label" for="booking-name">* Votre nom / Le nom de votre organisme</label>
+                    <input class="form__input" type="text" id="booking-name" name="user_name" required />
+                    <label class="form__label" for="booking-mail">* Votre e-mail</label>
+                    <input class="form__input" type="email" id="booking-mail" name="user_email" required />
+                    <label class="form__label" for="booking-phone">* Un numéro de téléphone où on peut vous joindre</label>
+                    <input class="form__input" type="tel" id="booking-phone" name="user_phone" required />
+                    <label class="form__label" for="booking-msg">* Détaillez-nous votre projet<br>
+                        <ul>
+                            <li>Date</li>
+                            <li>Temps de jeu, conditions</li>
+                            <li>Budget</li>
+                            <li>Défraiement</li>
+                            <li>Conditions d'accueil (repas, boisson, logement)</li>
+                        </ul>
+                    </label>
+                    <textarea class="form__textarea" id="booking-msg" name="user_message" required ></textarea>
+                    <input class="form__input" type="checkbox" name="user_consent" value="false" required />
+                    <label class="form__label form__label--checkbox" >Je suis d'accord pour vous filer mes données perso vu que vous n'en ferez pas n'importe quoi.</label>
+                    <button type="submit" class="btn form__btn btn--primary btn--with-text btn--send btn--below-text" id="booking-submit-button">Envoyer</button>
                 </form>
             </div>
+            <script type="text/javascript">
+                const params = new URLSearchParams(window.location.search);
+                for (const [key, value] of params) {
+                    console.log(key + '=' + value);
+                }
+                if (params.has('errmsg')) {
+                    let errmsg = document.createElement('p');
+                    errmsg.className = 'text-block';
+                    errmsg.innerHTML = '<b class="strong">' + params.get("errmsg") + '</b>';
+                    let contactForm = document.getElementById('contact-form');
+                    let wrapperDiv = contactForm.parentNode;
+                    wrapperDiv.insertBefore(errmsg, contactForm);
+                }
+            </script>
         </div>
         <!-- Footer -->
         <footer class="footer">

@@ -51,18 +51,33 @@
                 </section>
             </div>
             <div class="wrapper--contact-form">
-                <form id="contact-form" class="form">
+                <form id="contact-form" class="form" action="sendmail.php" method="post">
+                    <input type="hidden" id="form-type" name="form_type"  value="contact">
                     <label class="form__label" for="contact-name">Ton p'ti nom</label>
                     <input class="form__input" type="text" id="contact-name" name="user_name" maxlength="100" required />
                     <label class="form__label" for="contact-mail">Ton email</label>
                     <input class="form__input" type="email" id="contact-mail" name="user_email" required />
                     <label class="form__label" for="contact-msg">Ton mot d'amour</label>
-                    <textarea class="form__textarea" id="contact-msg" name="user_message required"></textarea>
+                    <textarea class="form__textarea" id="contact-msg" name="user_message" required ></textarea>
                     <input class="form__input" type="checkbox" name="user_consent" value="false" required />
                     <label class="form__label form__label--checkbox">Je suis d'accord pour vous filer mes données perso vu que vous n'en ferez pas n'importe quoi.</label>
-                    <button class="btn form__btn btn--primary btn--with-text btn--send btn--below-text" id="contact-submit-button">Envoyer</button>
+                    <button type="submit" class="btn form__btn btn--primary btn--with-text btn--send btn--below-text" id="contact-submit-button">Envoyer</button>
                 </form>
             </div>
+            <script type="text/javascript">
+                const params = new URLSearchParams(window.location.search);
+                for (const [key, value] of params) {
+                    console.log(key + '=' + value);
+                }
+                if (params.has('errmsg')) {
+                    let errmsg = document.createElement('p');
+                    errmsg.className = 'text-block';
+                    errmsg.innerHTML = '<b class="strong">' + params.get("errmsg") + '</b>';
+                    let contactForm = document.getElementById('contact-form');
+                    let wrapperDiv = contactForm.parentNode;
+                    wrapperDiv.insertBefore(errmsg, contactForm);
+                }
+            </script>
         </div>
         <!-- Footer -->
         <footer class="footer">
