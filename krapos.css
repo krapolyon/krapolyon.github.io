@@ -779,10 +779,14 @@ html {
 */
 
 /* https://webkit.org/blog/13096/css-has-pseudo-class/ */
-.card:has(.card__link:is(:hover, :active)) {
-    background: var(--link-color);
+
+.card:has(.card__link) {
     border-radius: 1rem;
     padding: 0.75rem;
+}
+
+.card:has(.card__link:is(:hover, :active)) {
+    background: var(--link-color);
 }
 
 .card__img {
