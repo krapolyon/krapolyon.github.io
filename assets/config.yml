@@ -1,10 +1,122 @@
+# Les Krapos website configuration file
+# =====================================
+#
+# This file is used by the site generator (generator.py) to build html static
+# pages for which the content may evolve in time. For example we use it for
+# defining the links to youtube videos we want to appear in the media page
+#
+# The configuration file is written in the YAML format.
+# (https://yaml.org/spec/1.2.2/)
+#
+# YAML (rhymes with “camel”) is a human-friendly, cross language, Unicode based
+# data serialization language designed around the common native data types of
+# dynamic programming languages. It is broadly useful for programming needs
+# ranging from configuration files to internet messaging to object persistence
+# to data auditing and visualization.
+#
+# The document contains 3 sections: media, setlist, friends. Each section
+# provides data used to fill the template of the corresponding html files
+# media.html, setlist.html, friends.html.
+#
+#
+# HowTos
+# ------
+#
+# How to add a new album
+# ++++++++++++++++++++++
+#
+# Albums are defined in the media['audio'] object. This object contains of 
+# album properties definition. The albums will show up on the website in the
+# same order as they are listed here. So if you want to present an album in
+# first position you have to define it first.
+#
+# The easiest way to add a new album is to copy/paste the definition of an
+# existing one and edit it. Make sure you keep all the spacings as this is
+# important in Yaml documents. 
+#
+# The album definition contains the following properties:
+#
+#      title: #Title of the album#
+#      year: #Year the album was released#
+#      url: #Link to the album on soundcloud#
+#      artwork: 
+#        file: #Name of the file used to illustrate the album#
+#        width: 100px
+#        height: 100px
+#
+# The file used as an illustration must be placed in the
+# assets/images/medias/audio folder. It must be a square of at least 100px.
+#
+# How to add a new video
+# ++++++++++++++++++++++
+#
+# Videos are defined in the media['video'] object. This object contains of 
+# video properties definition. The video will show up on the website in the
+# same order as they are listed here. So if you want to present a video in
+# first position you have to define it first.
+#
+# The easiest way to add a new video is to copy/paste the definition of an
+# existing one and edit it. Make sure you keep all the spacings as this is
+# important in Yaml documents.
+#
+# The video definition contains the following properties:
+#
+#      title: #Title of the video#
+#      location: #Location where the video was shot#
+#      year: #Year when the video was shot#
+#      url: #Link to the video on Youtube#
+#      artwork:
+#        file: #Name of the file used to illustrate the video#
+#        width: 160px
+#        height: 90px
+#
+# The file used as an illustration must be placed in the
+# assets/images/medias/video folder. It must have a 16:9 width:height ratio.
+#
+# How to add a new title to the setlist
+# +++++++++++++++++++++++++++++++++++++
+#
+# The setlist is defined in the 'setlist' object. 
+#
+# The easiest way to add a new song is to copy/paste the definition of an
+# existing one and edit it. Make sure you keep all the spacings as this is
+# important in Yaml documents.
+#
+# The song definition contains the following properties:
+# 
+#    title: #Title of the song#
+#    artist: #Artist#
+#
+# Currently, the setlist is used to fill the alt text of the setlist 
+# illustration.
+#
+# How to add a new friend on the friends page
+# +++++++++++++++++++++++++++++++++++++++++++
+#
+# The friends are defined in the 'friends' object.
+# The easiest way to add a new friend is to copy/paste the definition of an
+# existing one and edit it. Make sure you keep all the spacings as this is
+# important in Yaml documents.
+#
+# The friend definition contains the following properties
+#
+#    name: #Name of the friend#
+#    tagline: #Tag line#
+#    region: #Region code (see the 'regions' for a list of codes)#
+#    location: #City#
+#    logo: #Name of logo file without extension#
+#    url: #Friend webpage#
+#
+# The friend logo must be placed in the /assets/images/friends/<region> folder.
+# It must have the png extension and it must be a square.
+
 media:
 
   audio:
     - title: Mauvaise copie
       year: 2019
       url: https://soundcloud.com/leskrapos/sets/mauvaise-copie
-      artwork: 
+      artwork:
         file: mauvaise_copie.jpg
         width: 100px
         height: 100px
@@ -12,7 +124,7 @@ media:
     - title: Love @NewMorning
       year: 2016
       url: https://soundcloud.com/leskrapos/sets/love-newmorning
-      artwork: 
+      artwork:
           file: new_morning.jpg
           width: 100px
           height: 100px
@@ -26,6 +138,14 @@ media:
         height: 100px
 
   video:
+    - tune: Shanti Shanti
+      reference: Perache 2024
+      url: https://www.youtube.com/watch?v=cC9Ikqm_xek
+      artwork: 
+        file: shanti.jpeg
+        width: 160px
+        height: 90px
+
     - tune: Toccata
       reference: Fanfa'Rhône 2021
       url: https://youtu.be/X9S5LUO_yD8
@@ -42,6 +162,7 @@ media:
         width: 160px
         height: 90px
 
+
 setlist:
   - title: "8 bit" 
     artist: "Adhesive Wombat"
@@ -51,6 +172,91 @@ setlist:
     artist: "Knife Party"
   - title: "Canned Heat"
     artist: "Jamiroquai"
+  - title: "Confident"
+    artist: "Demi Lovato"
+  - title: "Medley Daft Punk"
+    artist: "Daft Punk"
+  - title: "D.A.N.C.E"
+    artist: "Justice"
+  - title: "Djidji"
+    artist: "Dalida"
+  - title: "Day Break"
+    artist: "Overwerk"
+  - title: "Medley Foals"
+    artist: "Foals"
+  - title: "Fuya"
+    artist: "C2C"
+  - title: "Ghost in the shell"
+    artist: "Kenji Kawai"
+  - title: "Giorgio"
+    artist: "Daft Punk"
+  - title: "Gnossienne 1"
+    artist: "Eric Satie"
+  - title: "Going in the distance"
+    artist: "Bill Conti"
+  - title: "Helicopter"
+    artist: "Bloc Party"
+  - title: "Hybrid Stigmata"
+    artist: "Dimmu Borgir"
+  - title: "I feel love"
+    artist: "Jimmy Sommerville"
+  - title: "Lone digger"
+    artist: "Caravan Palace"
+  - title: "Magnolia Forever"
+    artist: "Claude François"
+  - title: "Medley Major Lazer"
+    artist: "Major Lazer"
+  - title: "Maniac"
+    artist: "Michael Sembello"
+  - title: "Medley Jimmy Sommerville"
+    artist: "Jimmy Sommerville"
+  - title: "Megaman"
+    artist: "Manami Matsumae"
+  - title: "Mexican"
+    artist: "Babe Ruth"
+  - title: "Becoming Insane"
+    artist: "Infected Mushroom"
+  - title: "Nothing Else Matters"
+    artist: "Metallica"
+  - title: "Pony"
+    artist: "Deluxe"
+  - title: "Pressure in my head"
+    artist: "Muse"
+  - title: "Radio/Video"
+    artist: "System of a Down"
+  - title: "Medley Rodrigo et Gabrierlla"
+    artist: "Rodrigo et Gabriella"
+  - title: "Schrödinger"
+    artist: "Anakronic Electro Orkestra"
+  - title: "Shanti Shanti Shanti"
+    artist: "Baby Metal"
+  - title: "Sledge"
+    artist: "Dance with the dead"
+  - title: "Starlight"
+    artist: "Supermen Lovers"
+  - title: "Sur la planche"
+    artist: "La femme"
+  - title: "Te quiero puta"
+    artist: "Rammstein"
+  - title: "The bay"
+    artist: "Metronomy"
+  - title: "Thunderstruck"
+    artist: "AC/DC"
+  - title: "Toccata"
+    artist: "Overwerk"
+  - title: "Tous les mêmes"
+    artist: "Stromae"
+  - title: "Turbo Killer"
+    artist: "Carpenter Brut"
+  - title: "Under the bridge"
+    artist: "Red Hot Chili Peppers"
+  - title: "Uptown Funk"
+    artist: "Mark Ronson"
+  - title: "War"
+    artist: "Hypnotic Brass Ensemble"
+  - title: "We are your friends"
+    artist: "Justice"
+
 
 regions :
   ARA: Auvergne-Rhône-Alpes
@@ -68,9 +274,6 @@ regions :
   PDL:  Pays de la Loire
   WLD: Ailleurs dans le monde ...
 
-
-#Pas pu mettre les zouzes, pas trouvé de page FB
-#Je les ai rangés par régions, plus facile pour gérer l'ordre: le site les affiche dans l'ordre où ils arrivent, du coup on mettre ceux qu'on aime le plus avant ;)
 
 friends:
   - name: La Pustule
@@ -310,9 +513,9 @@ friends:
     location: Paris
     logo: godfingers
     url: https://www.godfingers.com
+
   - name: Poil O'Brass Band
     tagline: Fanfare ébouriffante à la bonne humeur duveteuse
-
     region: IDF
     location: Paris
     logo: poilobrassband

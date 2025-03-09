@@ -1,23 +1,29 @@
 <!doctype html>
 <html lang="fr">
     <head>
+        <!-- Meta -->
         <meta charset="utf-8"/>
         <meta name="description" content="Retrouvez les Krapos sur Soundcloud, où la fanfare a publié trois albums gratuits, et sur Youtube où plusieurs vidéos de concerts en salle ou spectacles de rue sont disponibles."/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Title -->
         <title>Médias - Les Krapos - Fanfare amphibienne</title>
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap">
+        <!-- Stylesheets -->
         <link rel="stylesheet" href="krapos.css" />
+        <!-- Icons -->
+        <link rel="icon" href="assets/images/common/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/>
+        <link rel="icon" href="assets/images/common/favicon/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="assets/images/common/favicon/android-chrome-192x192.png" sizes="192x192" type="image/png" />
+        <link rel="icon" href="assets/images/common/favicon/android-chrome-512x512.png" sizes="512x512" type="image/png" />
+        <link rel="icon" href="assets/images/common/favicon/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="assets/images/common/favicon/apple-touch-icon.png" type="image/png" />
+        <!-- Scripts -->
         <script src="nav-menu.js" defer></script>
         <script src="carousel.js" defer></script>
     </head>
     <body class="body">
         <!-- Header -->
         <header class="header">
-            <img id="header-logo-img" class="header__logo" src="assets/images/common/LogoKrapo.svg" width="100px" heigh="100px" alt="Logo Krapo"/>
+            <a href="index.html" class="link"><img id="header-logo-img" class="header__logo" src="assets/images/common/LogoKrapo.svg" width="100px" heigh="100px" alt="Logo Krapo"/></a>
             <nav id="main-nav" class="menu header__menu" aria-label="Site menu">
                 <button id="btn-main-nav" class="btn btn--hamburger header__menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav"></button>
                 <ul id="main-nav-list" class="list menu__list menu__list--hidden">
@@ -39,7 +45,7 @@
         </header>
         <!-- Media Page -->
         <div id="media-page" class="page page--media">
-            <div class="wrapper--section-media-albums">
+            <div class="wrapper wrapper--section-media-albums">
                 <section id="media-albums" class="section page_section section--media-albums">
                     <div class="wrapper wrapper--media-albums-img">
                         <div class="blob blob--audio">
@@ -64,7 +70,7 @@
                                             <p class="card__copy">{{ audio.year }}</p>
                                         </div>
                                         <div class="card__footer card__footer--type-1">
-                                            <a href="{{ audio.url }}" target="_blank" class="link btn btn--primary btn--listen btn--with-text">&Eacutecouter</a>
+                                            <a href="{{ audio.url }}" target="_blank" class="btn btn--primary btn--listen btn--with-text">&Eacutecouter</a>
                                         </div>
                                     </div>
                                 </li>{% endfor %}
@@ -98,7 +104,7 @@
                                             <p class="card__copy">{{ video.reference }}</p>
                                         </div>
                                         <div class="card__footer card__footer--type-2">
-                                            <a href="{{ video.url }}" target="_blank" class="link btn btn--primary btn--view btn--with-text">Regarder</a>
+                                            <a href="{{ video.url }}" target="_blank" class="btn btn--primary btn--view btn--with-text">Regarder</a>
                                         </div>
                                     </div>
                                 </li>{% endfor %}
