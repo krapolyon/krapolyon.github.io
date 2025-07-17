@@ -26,6 +26,15 @@ media:
         height: 100px
 
   video:
+
+    - tune: Shanti Shanti
+      reference: Perache 2024
+      url: https://www.youtube.com/watch?v=cC9Ikqm_xek
+      artwork:
+        file: shanti.jpeg
+        width: 160px
+        height: 90px
+
     - tune: Toccata
       reference: Fanfa'Rhône 2021
       url: https://youtu.be/X9S5LUO_yD8
@@ -41,6 +50,8 @@ media:
         file: daftpunk.jpg
         width: 160px
         height: 90px
+
+
 
 setlist:
   - title: "8 bit" 
