@@ -532,11 +532,23 @@ html {
 
 .btn--primary {
     color: var(--tertiary-color);
+    text-decoration: none;
     background: linear-gradient(var(--gradient-1-angle), var(--gradient-1-start), var(--gradient-1-end));
+}
+
+.btn--primary:link {
+    color: var(--tertiary-color);
+    text-decoration: none;
+}
+
+.btn--primary:active {
+    color: var(--tertiary-color);
+    text-decoration: none;
 }
 
 .btn--primary:visited {
     color: var(--tertiary-color);
+    text-decoration: none;
     background: linear-gradient(var(--gradient-1-angle), var(--gradient-1-start), var(--gradient-1-end));
 }
 
