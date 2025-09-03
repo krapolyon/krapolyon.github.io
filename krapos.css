@@ -1991,6 +1991,11 @@ html {
 
 }
 
+.form__hidden{
+  display: none;
+
+}
+
 .form__textarea{
   font-family: inherit;
   font-size: 100%;

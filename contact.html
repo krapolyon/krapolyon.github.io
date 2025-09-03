@@ -59,6 +59,7 @@
             <div class="wrapper--contact-form">
                 <form id="contact-form" class="form" action="sendmail.php" method="post">
                     <input type="hidden" id="form-type" name="form_type"  value="contact">
+                    <input class="form__hidden" name="user_extra" />
                     <label class="form__label" for="contact-name">Ton p'ti nom</label>
                     <input class="form__input" type="text" id="contact-name" name="user_name" maxlength="100" required />
                     <label class="form__label" for="contact-mail">Ton email</label>

@@ -60,6 +60,7 @@
                 <form id="contact-form" class="form" action="sendmail.php" method="post">
                     <input type="hidden" id="form-type" name="form_type"  value="booking">
                     <label class="form__label" for="booking-name">* Votre nom / Le nom de votre organisme</label>
+                    <input class="form__hidden" name="user_extra" />
                     <input class="form__input" type="text" id="booking-name" name="user_name" required />
                     <label class="form__label" for="booking-mail">* Votre e-mail</label>
                     <input class="form__input" type="email" id="booking-mail" name="user_email" required />

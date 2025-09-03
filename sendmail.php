@@ -64,6 +64,12 @@ if (array_key_exists('user_message', $_POST)) {
         $err = true;
     }
 
+    if (array_key_exists('user_extra', $_POST) && !empty($_POST['user_extra'])) {
+        $err_msg .= 'Error: bot filled hidden field.';
+        $err = true;
+        $msg_sent = true; // Fake message was sent
+    }
+
     if (!$err) {
         $mail = new PHPMailer();
         $mail->isSMTP();
