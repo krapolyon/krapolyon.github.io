@@ -70,6 +70,20 @@ if (array_key_exists('user_message', $_POST)) {
         $msg_sent = true; // Fake message was sent
     }
 
+    // Exclude some known spammers
+    $email_blacklist = array(
+        'zekisuquc419@gmail.com', 
+        'samuel.everett@jmailservice.com',
+        'conger.luis@gmail.com',
+        'monserrate.sayre@hotmail.com',
+        'no.reply.LiamPedersen@gmail.com',
+    );
+    if (array_key_exists('user_email', $_POST) && in_array($_POST['user_email'], $email_blacklist)) {
+        $err_msg .= 'Error: email in blacklist';
+        $err = true;
+        $msg_sent = true; // Fake message was sent
+    }
+
     if (!$err) {
         $mail = new PHPMailer();
         $mail->isSMTP();
